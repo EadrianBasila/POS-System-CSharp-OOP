@@ -125,6 +125,7 @@
       <DependentUpon>posCheckout.cs</DependentUpon>
     </Compile>
     <Compile Include="Product.cs" />
+    <Compile Include="purchaseRegistry.cs" />
     <Compile Include="recordDatabase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -339,8 +339,8 @@ namespace POSSystemOOPFinals
 
         private void posSweetsDV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //productIdTB.Text = invSweetsDV.Rows[e.RowIndex].Cells[0].Value.ToString();
-            //productIdTB.Text = invSweetsDV.Rows[e.RowIndex].Cells[0].Value.ToString();
+            productNameTB.Text = posSweetsDV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            productPrice.Text = posSweetsDV.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
         private void posMeatsDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -403,6 +403,50 @@ namespace POSSystemOOPFinals
         }
 
         private void panel19_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            productNameTB.Text = "";
+            productPrice.Text = "";
+            productPurchaseQuantity.Text = "";
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+          
+            if (posTotalPrice.Text == "")
+            {
+                posTotalPrice.Text = "0";
+            }
+            else 
+            {
+                var oldValue = int.Parse(posTotalPrice.Text);
+                if (productPurchaseQuantity.Text == "")
+                {
+                    MessageBox.Show("[!] Please Enter the desired quantity for the product");
+                }
+                else 
+                {
+                    var newValue = int.Parse(productPrice.Text)*int.Parse(productPurchaseQuantity.Text);
+                    posTotalPrice.Text = (oldValue + newValue).ToString();
+                    posPurchaseTB.Text += "> "+ productNameTB.Text + " x" + productPurchaseQuantity.Text + Environment.NewLine;
+                    productNameTB.Text = "";
+                    productPrice.Text = "";
+                    productPurchaseQuantity.Text = "";
+                }                               
+            } 
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productNameTB_TextChanged(object sender, EventArgs e)
         {
 
         }
