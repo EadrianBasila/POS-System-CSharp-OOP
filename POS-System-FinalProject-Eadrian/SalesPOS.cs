@@ -23,6 +23,205 @@ namespace POSSystemOOPFinals
             InitializeComponent();
         }
 
+     
+
+        private void dashboardIcon_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard formDashboard = new Dashboard();
+            formDashboard.ShowDialog();
+            this.Close();
+        }
+
+
+        private void inventoryIcon_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Inventory formInventory = new Inventory();
+            formInventory.ShowDialog();
+            this.Close();
+        }
+
+        public string purchaseValue;
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            purchaseValue = posTotalPrice.Text;
+            posCheckout posUc = new posCheckout();
+            posUc.transactionValue(purchaseValue.ToString());
+            posUc.ShowDialog();
+        }
+
+        private void posPastryDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.posPastryDV.Columns["Id"].Visible = false;
+            this.posPastryDV.Columns["productCost"].Visible = false;
+            this.posPastryDV.Columns["productSupplier"].Visible = false;
+            this.posPastryDV.Columns["productCategory"].Visible = false;
+            this.posPastryDV.Columns["productDate"].Visible = false;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            recordDatabase pDatabase = new recordDatabase("Products");
+            var records = pDatabase.checkRecords<Product>("productList");
+            var pCategory = "Pastry";
+            List<Product> filtered = records.Where(x => x.productCategory == pCategory).ToList();
+            posPastryDV.DataSource = filtered;
+            posPastryDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
+        }
+
+        private void posSweetsDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.posSweetsDV.Columns["Id"].Visible = false;
+            this.posSweetsDV.Columns["productCost"].Visible = false;
+            this.posSweetsDV.Columns["productSupplier"].Visible = false;
+            this.posSweetsDV.Columns["productCategory"].Visible = false;
+            this.posSweetsDV.Columns["productDate"].Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            recordDatabase pDatabase = new recordDatabase("Products");
+            var records = pDatabase.checkRecords<Product>("productList");
+            var pCategory = "Sweets";
+            List<Product> filtered = records.Where(x => x.productCategory == pCategory).ToList();
+            posSweetsDV.DataSource = filtered;
+            posSweetsDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+        }
+
+
+        private void posMeatsDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.posMeatsDV.Columns["Id"].Visible = false;
+            this.posMeatsDV.Columns["productCost"].Visible = false;
+            this.posMeatsDV.Columns["productSupplier"].Visible = false;
+            this.posMeatsDV.Columns["productCategory"].Visible = false;
+            this.posMeatsDV.Columns["productDate"].Visible = false;
+        }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            recordDatabase pDatabase = new recordDatabase("Products");
+            var records = pDatabase.checkRecords<Product>("productList");
+            var pCategory = "Meats";
+            List<Product> filtered = records.Where(x => x.productCategory == pCategory).ToList();
+            posMeatsDV.DataSource = filtered;
+            posMeatsDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+        }
+        private void posDrinksDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.posDrinksDV.Columns["Id"].Visible = false;
+            this.posDrinksDV.Columns["productCost"].Visible = false;
+            this.posDrinksDV.Columns["productSupplier"].Visible = false;
+            this.posDrinksDV.Columns["productCategory"].Visible = false;
+            this.posDrinksDV.Columns["productDate"].Visible = false;
+        }
+        private void button9_Click(object sender, EventArgs e)
+        {
+            recordDatabase pDatabase = new recordDatabase("Products");
+            var records = pDatabase.checkRecords<Product>("productList");
+            var pCategory = "Drinks";
+            List<Product> filtered = records.Where(x => x.productCategory == pCategory).ToList();
+            posDrinksDV.DataSource = filtered;
+            posDrinksDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+        }
+        private void posFruitsDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.posFruitsDV.Columns["Id"].Visible = false;
+            this.posFruitsDV.Columns["productCost"].Visible = false;
+            this.posFruitsDV.Columns["productSupplier"].Visible = false;
+            this.posFruitsDV.Columns["productCategory"].Visible = false;
+            this.posFruitsDV.Columns["productDate"].Visible = false;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            recordDatabase pDatabase = new recordDatabase("Products");
+            var records = pDatabase.checkRecords<Product>("productList");
+            var pCategory = "Fruits";
+            List<Product> filtered = records.Where(x => x.productCategory == pCategory).ToList();
+            posFruitsDV.DataSource = filtered;
+            posFruitsDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+           
+        }
+
+        private void button15_Click_1(object sender, EventArgs e)
+        {
+
+
+            if (posTotalPrice.Text == "")
+            {
+                posTotalPrice.Text = "0";
+            }
+            else
+            {
+                var oldValue = int.Parse(posTotalPrice.Text);
+                if (productPurchaseQuantity.Text == "")
+                {
+                    MessageBox.Show("[!] Please Enter the desired quantity for the product");
+                }
+                else
+                {
+                    var newValue = int.Parse(productPrice.Text) * int.Parse(productPurchaseQuantity.Text);
+                    posTotalPrice.Text = (oldValue + newValue).ToString();
+                    posPurchaseTB.Text += "> " + productNameTB.Text + " x" + productPurchaseQuantity.Text + " = " + newValue.ToString() + Environment.NewLine;
+                    productNameTB.Text = "";
+                    productPrice.Text = "";
+                    productPurchaseQuantity.Text = "";
+                }
+            }
+        }
+
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+            productNameTB.Text = "";
+            productPrice.Text = "";
+            productPurchaseQuantity.Text = "";
+        }
+
+        
+
+        private void posSweetsDV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            productNameTB.Text = posSweetsDV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            productPrice.Text = posSweetsDV.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+        private void posPastryDV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            productNameTB.Text = posPastryDV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            productPrice.Text = posPastryDV.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void posMeatsDV_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            productNameTB.Text = posMeatsDV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            productPrice.Text = posMeatsDV.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void posDrinksDV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            productNameTB.Text = posDrinksDV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            productPrice.Text = posDrinksDV.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void posFruitsDV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            productNameTB.Text = posFruitsDV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            productPrice.Text = posFruitsDV.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void posIcon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -37,15 +236,6 @@ namespace POSSystemOOPFinals
         {
 
         }
-
-        private void dashboardIcon_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Dashboard formDashboard = new Dashboard();
-            formDashboard.ShowDialog();
-            this.Close();
-        }
-
         private void SalesPOS_Load(object sender, EventArgs e)
         {
 
@@ -165,26 +355,6 @@ namespace POSSystemOOPFinals
         {
 
         }
-
-        private void inventoryIcon_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Inventory formInventory = new Inventory();
-            formInventory.ShowDialog();
-            this.Close();
-        }
-
-        private void posIcon_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-        }
-
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
 
@@ -243,7 +413,7 @@ namespace POSSystemOOPFinals
         }
 
 
-   
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -293,108 +463,74 @@ namespace POSSystemOOPFinals
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            posCheckout posUc = new posCheckout();
-            posUc.ShowDialog();
-        }
 
-        private void posPastryDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        private void label17_Click(object sender, EventArgs e)
         {
-            this.posPastryDV.Columns["Id"].Visible = false;
-            this.posPastryDV.Columns["productCost"].Visible = false;
-            this.posPastryDV.Columns["productSupplier"].Visible = false;
-            this.posPastryDV.Columns["productCategory"].Visible = false;
-            this.posPastryDV.Columns["productDate"].Visible = false;
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            recordDatabase pDatabase = new recordDatabase("Products");
-            var records = pDatabase.checkRecords<Product>("productList");
-            var pCategory = "Pastry";
-            List<Product> filtered = records.Where(x => x.productCategory == pCategory).ToList();
-            posPastryDV.DataSource = filtered;
-            posPastryDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
 
         }
 
-        private void posSweetsDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        private void productNameTB_TextChanged(object sender, EventArgs e)
         {
-            this.posSweetsDV.Columns["Id"].Visible = false;
-            this.posSweetsDV.Columns["productCost"].Visible = false;
-            this.posSweetsDV.Columns["productSupplier"].Visible = false;
-            this.posSweetsDV.Columns["productCategory"].Visible = false;
-            this.posSweetsDV.Columns["productDate"].Visible = false;
+
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void label5_Click_2(object sender, EventArgs e)
         {
-            recordDatabase pDatabase = new recordDatabase("Products");
-            var records = pDatabase.checkRecords<Product>("productList");
-            var pCategory = "Sweets";
-            List<Product> filtered = records.Where(x => x.productCategory == pCategory).ToList();
-            posSweetsDV.DataSource = filtered;
-            posSweetsDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
         }
 
-        private void posSweetsDV_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            productNameTB.Text = posSweetsDV.Rows[e.RowIndex].Cells[1].Value.ToString();
-            productPrice.Text = posSweetsDV.Rows[e.RowIndex].Cells[4].Value.ToString();
+
         }
 
-        private void posMeatsDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        private void label3_Click_1(object sender, EventArgs e)
         {
-            this.posMeatsDV.Columns["Id"].Visible = false;
-            this.posMeatsDV.Columns["productCost"].Visible = false;
-            this.posMeatsDV.Columns["productSupplier"].Visible = false;
-            this.posMeatsDV.Columns["productCategory"].Visible = false;
-            this.posMeatsDV.Columns["productDate"].Visible = false;
-        }
-        private void button8_Click(object sender, EventArgs e)
-        {
-            recordDatabase pDatabase = new recordDatabase("Products");
-            var records = pDatabase.checkRecords<Product>("productList");
-            var pCategory = "Meats";
-            List<Product> filtered = records.Where(x => x.productCategory == pCategory).ToList();
-            posMeatsDV.DataSource = filtered;
-            posMeatsDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-        }
-        private void posDrinksDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            this.posDrinksDV.Columns["Id"].Visible = false;
-            this.posDrinksDV.Columns["productCost"].Visible = false;
-            this.posDrinksDV.Columns["productSupplier"].Visible = false;
-            this.posDrinksDV.Columns["productCategory"].Visible = false;
-            this.posDrinksDV.Columns["productDate"].Visible = false;
-        }
-        private void button9_Click(object sender, EventArgs e)
-        {
-            recordDatabase pDatabase = new recordDatabase("Products");
-            var records = pDatabase.checkRecords<Product>("productList");
-            var pCategory = "Drinks";
-            List<Product> filtered = records.Where(x => x.productCategory == pCategory).ToList();
-            posDrinksDV.DataSource = filtered;
-            posDrinksDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-        }
-        private void posFruitsDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            this.posFruitsDV.Columns["Id"].Visible = false;
-            this.posFruitsDV.Columns["productCost"].Visible = false;
-            this.posFruitsDV.Columns["productSupplier"].Visible = false;
-            this.posFruitsDV.Columns["productCategory"].Visible = false;
-            this.posFruitsDV.Columns["productDate"].Visible = false;
+
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            recordDatabase pDatabase = new recordDatabase("Products");
-            var records = pDatabase.checkRecords<Product>("productList");
-            var pCategory = "Fruits";
-            List<Product> filtered = records.Where(x => x.productCategory == pCategory).ToList();
-            posFruitsDV.DataSource = filtered;
-            posFruitsDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-           
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+    
+        
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productPurchaseQuantity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void posMeats_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void posSweetsDV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -409,44 +545,15 @@ namespace POSSystemOOPFinals
 
         private void button14_Click(object sender, EventArgs e)
         {
-            productNameTB.Text = "";
-            productPrice.Text = "";
-            productPurchaseQuantity.Text = "";
+
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
 
-          
-            if (posTotalPrice.Text == "")
-            {
-                posTotalPrice.Text = "0";
-            }
-            else 
-            {
-                var oldValue = int.Parse(posTotalPrice.Text);
-                if (productPurchaseQuantity.Text == "")
-                {
-                    MessageBox.Show("[!] Please Enter the desired quantity for the product");
-                }
-                else 
-                {
-                    var newValue = int.Parse(productPrice.Text)*int.Parse(productPurchaseQuantity.Text);
-                    posTotalPrice.Text = (oldValue + newValue).ToString();
-                    posPurchaseTB.Text += "> "+ productNameTB.Text + " x" + productPurchaseQuantity.Text + Environment.NewLine;
-                    productNameTB.Text = "";
-                    productPrice.Text = "";
-                    productPurchaseQuantity.Text = "";
-                }                               
-            } 
         }
 
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void productNameTB_TextChanged(object sender, EventArgs e)
+        private void label14_Click(object sender, EventArgs e)
         {
 
         }

@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ucChange = new System.Windows.Forms.TextBox();
             this.ucCashTendered = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.ucTotalPrice = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ucBt1 = new System.Windows.Forms.Button();
@@ -56,12 +55,14 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,10 +75,22 @@
             this.panel1.Size = new System.Drawing.Size(550, 74);
             this.panel1.TabIndex = 1;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bebas Neue", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(7, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(213, 48);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Cash Register:";
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(264, 23);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(259, 31);
@@ -103,15 +116,15 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Total Price:";
             // 
-            // textBox1
+            // ucChange
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(179, 236);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 36);
-            this.textBox1.TabIndex = 25;
+            this.ucChange.BackColor = System.Drawing.Color.White;
+            this.ucChange.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ucChange.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucChange.Location = new System.Drawing.Point(301, 236);
+            this.ucChange.Name = "ucChange";
+            this.ucChange.Size = new System.Drawing.Size(137, 36);
+            this.ucChange.TabIndex = 25;
             // 
             // ucCashTendered
             // 
@@ -157,6 +170,8 @@
             this.ucTotalPrice.ReadOnly = true;
             this.ucTotalPrice.Size = new System.Drawing.Size(346, 45);
             this.ucTotalPrice.TabIndex = 23;
+            this.ucTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.ucTotalPrice.TextChanged += new System.EventHandler(this.ucTotalPrice_TextChanged);
             // 
             // panel7
             // 
@@ -178,36 +193,13 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "CHANGE";
             // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel9.Location = new System.Drawing.Point(29, 235);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(144, 10);
-            this.panel9.TabIndex = 22;
-            // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 24;
-            this.listBox1.Items.AddRange(new object[] {
-            "Cash",
-            "Cheque",
-            "Debit",
-            "Credit"});
-            this.listBox1.Location = new System.Drawing.Point(29, 245);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(144, 28);
-            this.listBox1.TabIndex = 21;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.DarkOrange;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(308, 414);
+            this.button3.Location = new System.Drawing.Point(311, 429);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(212, 78);
             this.button3.TabIndex = 30;
@@ -228,7 +220,7 @@
             this.panel2.Controls.Add(this.ucBt7);
             this.panel2.Controls.Add(this.ucBt5);
             this.panel2.Controls.Add(this.ucBt6);
-            this.panel2.Location = new System.Drawing.Point(29, 310);
+            this.panel2.Location = new System.Drawing.Point(29, 247);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(266, 353);
             this.panel2.TabIndex = 26;
@@ -376,7 +368,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel5.Location = new System.Drawing.Point(29, 300);
+            this.panel5.Location = new System.Drawing.Point(29, 237);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(266, 10);
             this.panel5.TabIndex = 29;
@@ -387,12 +379,13 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(308, 500);
+            this.button1.Location = new System.Drawing.Point(311, 515);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(212, 78);
             this.button1.TabIndex = 27;
             this.button1.Text = "Checkout";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -400,7 +393,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(308, 584);
+            this.button2.Location = new System.Drawing.Point(311, 599);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(212, 78);
             this.button2.TabIndex = 28;
@@ -408,40 +401,51 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label4
+            // panel6
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bebas Neue", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(7, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(213, 48);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Cash Register:";
+            this.panel6.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel6.Controls.Add(this.button4);
+            this.panel6.Location = new System.Drawing.Point(29, 599);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(266, 94);
+            this.panel6.TabIndex = 31;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button4.Location = new System.Drawing.Point(53, 18);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(151, 60);
+            this.button4.TabIndex = 32;
+            this.button4.Text = "Enter";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // posCheckout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(550, 694);
+            this.ClientSize = new System.Drawing.Size(550, 719);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ucChange);
             this.Controls.Add(this.ucCashTendered);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.ucTotalPrice);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "posCheckout";
             this.Text = "posCheckout";
+            this.Load += new System.EventHandler(this.posCheckout_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -451,6 +455,7 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,15 +467,13 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ucChange;
         private System.Windows.Forms.TextBox ucCashTendered;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox ucTotalPrice;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button ucBt1;
@@ -487,5 +490,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button4;
     }
 }

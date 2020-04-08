@@ -16,5 +16,8 @@ namespace POS_System_FinalProject_Eadrian
 
         [BsonElement("purchaseRegistry")]
         public string posPurchaseRegistry { get; set; }
+
+        public string posCheckout { get; set; }
+
     }
 }
