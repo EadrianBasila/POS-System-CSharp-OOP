@@ -377,5 +377,10 @@ namespace POS_System_FinalProject_Eadrian
         {
             this.invFruitsDV.Columns["Id"].Visible = false;
         }
+
+        private void productQuantityTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

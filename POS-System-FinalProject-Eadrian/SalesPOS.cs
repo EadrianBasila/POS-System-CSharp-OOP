@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using POS_System_FinalProject_Eadrian;
 using System;
 using System.Collections.Generic;
@@ -56,6 +57,8 @@ namespace POSSystemOOPFinals
         private void posPastryDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             this.posPastryDV.Columns["Id"].Visible = false;
+            this.posPastryDV.Columns["productRetail"].Visible = false;
+            this.posPastryDV.Columns["productQuantity"].Visible = false;
             this.posPastryDV.Columns["productCost"].Visible = false;
             this.posPastryDV.Columns["productSupplier"].Visible = false;
             this.posPastryDV.Columns["productCategory"].Visible = false;
@@ -75,6 +78,8 @@ namespace POSSystemOOPFinals
         private void posSweetsDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             this.posSweetsDV.Columns["Id"].Visible = false;
+            this.posSweetsDV.Columns["productRetail"].Visible = false;
+            this.posSweetsDV.Columns["productQuantity"].Visible = false;
             this.posSweetsDV.Columns["productCost"].Visible = false;
             this.posSweetsDV.Columns["productSupplier"].Visible = false;
             this.posSweetsDV.Columns["productCategory"].Visible = false;
@@ -95,6 +100,8 @@ namespace POSSystemOOPFinals
         private void posMeatsDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             this.posMeatsDV.Columns["Id"].Visible = false;
+            this.posMeatsDV.Columns["productRetail"].Visible = false;
+            this.posMeatsDV.Columns["productQuantity"].Visible = false;
             this.posMeatsDV.Columns["productCost"].Visible = false;
             this.posMeatsDV.Columns["productSupplier"].Visible = false;
             this.posMeatsDV.Columns["productCategory"].Visible = false;
@@ -112,6 +119,8 @@ namespace POSSystemOOPFinals
         private void posDrinksDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             this.posDrinksDV.Columns["Id"].Visible = false;
+            this.posDrinksDV.Columns["productRetail"].Visible = false;
+            this.posDrinksDV.Columns["productQuantity"].Visible = false;
             this.posDrinksDV.Columns["productCost"].Visible = false;
             this.posDrinksDV.Columns["productSupplier"].Visible = false;
             this.posDrinksDV.Columns["productCategory"].Visible = false;
@@ -129,6 +138,8 @@ namespace POSSystemOOPFinals
         private void posFruitsDV_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             this.posFruitsDV.Columns["Id"].Visible = false;
+            this.posFruitsDV.Columns["productRetail"].Visible = false;
+            this.posFruitsDV.Columns["productQuantity"].Visible = false;
             this.posFruitsDV.Columns["productCost"].Visible = false;
             this.posFruitsDV.Columns["productSupplier"].Visible = false;
             this.posFruitsDV.Columns["productCategory"].Visible = false;
@@ -148,29 +159,40 @@ namespace POSSystemOOPFinals
 
         private void button15_Click_1(object sender, EventArgs e)
         {
+            MongoClient client = new MongoClient();
+            IMongoDatabase pDatabase = client.GetDatabase("Products");
+            IMongoCollection<Product> records = pDatabase.GetCollection<Product>("productList");
+            var productPurchase = int.Parse(productStockTB.Text) - int.Parse(productPurchaseQuantity.Text);
 
-
-            if (posTotalPrice.Text == "")
+            if ((int.Parse(productPurchaseQuantity.Text) <= int.Parse(productStockTB.Text)) == true)
             {
-                posTotalPrice.Text = "0";
+                var recordsUpdate = Builders<Product>.Update.Set(p => p.productQuantity, productPurchase.ToString());
+                records.UpdateOne(s => s.Id == ObjectId.Parse(productIdTB.Text), recordsUpdate);
+           
+                    var oldValue = int.Parse(posTotalPrice.Text);
+                    if (productPurchaseQuantity.Text == "")
+                    {
+                        MessageBox.Show("[!] Please Enter the desired quantity for the product");
+                    }
+                    else
+                    {
+                        var newValue = int.Parse(productPrice.Text) * int.Parse(productPurchaseQuantity.Text);
+                        posTotalPrice.Text = (oldValue + newValue).ToString();
+                        posPurchaseTB.Text += "> " + productNameTB.Text + " x" + productPurchaseQuantity.Text + " = " + newValue.ToString() + Environment.NewLine;
+                        productIdTB.Text = "";
+                        productNameTB.Text = "";
+                        productPrice.Text = "";
+                        productPurchaseQuantity.Text = "";
+                        productStockTB.Text = "";
+                    }
+                
             }
+
             else
             {
-                var oldValue = int.Parse(posTotalPrice.Text);
-                if (productPurchaseQuantity.Text == "")
-                {
-                    MessageBox.Show("[!] Please Enter the desired quantity for the product");
-                }
-                else
-                {
-                    var newValue = int.Parse(productPrice.Text) * int.Parse(productPurchaseQuantity.Text);
-                    posTotalPrice.Text = (oldValue + newValue).ToString();
-                    posPurchaseTB.Text += "> " + productNameTB.Text + " x" + productPurchaseQuantity.Text + " = " + newValue.ToString() + Environment.NewLine;
-                    productNameTB.Text = "";
-                    productPrice.Text = "";
-                    productPurchaseQuantity.Text = "";
-                }
+                MessageBox.Show("[!] Insufficient Stocks, Please Try Again!");
             }
+
         }
 
         private void button14_Click_1(object sender, EventArgs e)
@@ -180,34 +202,48 @@ namespace POSSystemOOPFinals
             productPurchaseQuantity.Text = "";
         }
 
-        
+        private void SalesPOS_Load(object sender, EventArgs e)
+        {
+            posTotalPrice.Text = "0";
+        }
+
 
         private void posSweetsDV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            productIdTB.Text = posSweetsDV.Rows[e.RowIndex].Cells[0].Value.ToString();
             productNameTB.Text = posSweetsDV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            productStockTB.Text = posSweetsDV.Rows[e.RowIndex].Cells[2].Value.ToString();
             productPrice.Text = posSweetsDV.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
         private void posPastryDV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            productIdTB.Text = posPastryDV.Rows[e.RowIndex].Cells[0].Value.ToString();
             productNameTB.Text = posPastryDV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            productStockTB.Text = posPastryDV.Rows[e.RowIndex].Cells[2].Value.ToString();
             productPrice.Text = posPastryDV.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
         private void posMeatsDV_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            productIdTB.Text = posMeatsDV.Rows[e.RowIndex].Cells[0].Value.ToString();
             productNameTB.Text = posMeatsDV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            productStockTB.Text = posMeatsDV.Rows[e.RowIndex].Cells[2].Value.ToString();
             productPrice.Text = posMeatsDV.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
         private void posDrinksDV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            productIdTB.Text = posDrinksDV.Rows[e.RowIndex].Cells[0].Value.ToString();
             productNameTB.Text = posDrinksDV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            productStockTB.Text = posDrinksDV.Rows[e.RowIndex].Cells[2].Value.ToString();
             productPrice.Text = posDrinksDV.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
         private void posFruitsDV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            productIdTB.Text = posFruitsDV.Rows[e.RowIndex].Cells[0].Value.ToString();
             productNameTB.Text = posFruitsDV.Rows[e.RowIndex].Cells[1].Value.ToString();
+            productStockTB.Text = posFruitsDV.Rows[e.RowIndex].Cells[2].Value.ToString();
             productPrice.Text = posFruitsDV.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
@@ -236,10 +272,7 @@ namespace POSSystemOOPFinals
         {
 
         }
-        private void SalesPOS_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
@@ -554,6 +587,11 @@ namespace POSSystemOOPFinals
         }
 
         private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productStockTB_TextChanged(object sender, EventArgs e)
         {
 
         }
