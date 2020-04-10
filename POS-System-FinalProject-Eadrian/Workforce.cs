@@ -18,14 +18,22 @@ namespace POSSystemOOPFinals
         public string loginPassword { get; set; }
 
         [BsonElement("employeeSalary")]
-        public int employeeSalary { get; set; }
+        public string employeeSalary { get; set; }
 
-        public Workforce(string employeeName, string loginUsername, string loginPassword, int employeeSalary)
+        [BsonElement("employeeCategory")]
+        public string employeeCategory { get; set; }
+
+        [BsonElement("employeeDateHired")]
+        public string dateHired { get; set; }
+
+        public Workforce(string employeeName, string loginUsername, string loginPassword, string employeeSalary, string employeeCategory, string dateHired)
         {
             this.employeeName = employeeName;
             this.loginUsername = loginUsername;
             this.loginPassword = loginPassword;
             this.employeeSalary = employeeSalary;
+            this.employeeCategory = employeeCategory;
+            this.dateHired = dateHired;
         }
     }
 }

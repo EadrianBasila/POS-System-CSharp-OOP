@@ -87,8 +87,8 @@ namespace POSSystemOOPFinals
                     {
                         MessageBox.Show("[!] Incorrect Credentials. Please Try Again!");
                         adminLogin.Checked = false;
-                        loginUsername.Text = "";
-                        loginPassword.Text= "";
+                        loginUsername.Text = " ";
+                        loginPassword.Text= " ";
                     }
 
                 }
