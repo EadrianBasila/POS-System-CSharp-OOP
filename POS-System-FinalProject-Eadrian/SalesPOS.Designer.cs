@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesPOS));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.posTotalPrice = new System.Windows.Forms.TextBox();
@@ -94,21 +97,25 @@
             this.posFruits = new System.Windows.Forms.PictureBox();
             this.posFruitsDV = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button15 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.productCost = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.productIdTB = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.productStockTB = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.productPrice = new System.Windows.Forms.TextBox();
             this.productNameTB = new System.Windows.Forms.TextBox();
+            this.button14 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button15 = new System.Windows.Forms.Button();
             this.productPurchaseQuantity = new System.Windows.Forms.TextBox();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.productProfit = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.productStockTB = new System.Windows.Forms.TextBox();
-            this.productIdTB = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -148,6 +155,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.posFruitsDV)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel19.SuspendLayout();
+            this.panel21.SuspendLayout();
             this.panel20.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -171,7 +179,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("dark forest", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(78, 15);
+            this.label4.Location = new System.Drawing.Point(74, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(229, 37);
             this.label4.TabIndex = 8;
@@ -185,6 +193,7 @@
             this.posTotalPrice.ForeColor = System.Drawing.Color.White;
             this.posTotalPrice.Location = new System.Drawing.Point(86, 57);
             this.posTotalPrice.Name = "posTotalPrice";
+            this.posTotalPrice.ReadOnly = true;
             this.posTotalPrice.Size = new System.Drawing.Size(260, 40);
             this.posTotalPrice.TabIndex = 30;
             this.posTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -197,6 +206,7 @@
             this.posPurchaseTB.Location = new System.Drawing.Point(14, 102);
             this.posPurchaseTB.Multiline = true;
             this.posPurchaseTB.Name = "posPurchaseTB";
+            this.posPurchaseTB.ReadOnly = true;
             this.posPurchaseTB.Size = new System.Drawing.Size(333, 553);
             this.posPurchaseTB.TabIndex = 29;
             // 
@@ -231,7 +241,7 @@
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(15, 30);
+            this.pictureBox3.Location = new System.Drawing.Point(6, 30);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(65, 68);
             this.pictureBox3.TabIndex = 21;
@@ -430,27 +440,13 @@
             this.posSweetsDV.AllowUserToDeleteRows = false;
             this.posSweetsDV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.posSweetsDV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.posSweetsDV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.posSweetsDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.posSweetsDV.Location = new System.Drawing.Point(20, 106);
             this.posSweetsDV.Name = "posSweetsDV";
             this.posSweetsDV.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.posSweetsDV.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.posSweetsDV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posSweetsDV.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.posSweetsDV.RowTemplate.Height = 48;
             this.posSweetsDV.RowTemplate.ReadOnly = true;
             this.posSweetsDV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -612,8 +608,12 @@
             this.posPastryDV.Location = new System.Drawing.Point(20, 103);
             this.posPastryDV.Name = "posPastryDV";
             this.posPastryDV.ReadOnly = true;
-            this.posPastryDV.RowHeadersWidth = 51;
-            this.posPastryDV.RowTemplate.Height = 24;
+            this.posPastryDV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posPastryDV.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.posPastryDV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posPastryDV.RowTemplate.Height = 48;
+            this.posPastryDV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.posPastryDV.Size = new System.Drawing.Size(889, 537);
             this.posPastryDV.TabIndex = 58;
             this.posPastryDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.posPastryDV_CellClick);
@@ -707,7 +707,11 @@
             this.posMeatsDV.Name = "posMeatsDV";
             this.posMeatsDV.ReadOnly = true;
             this.posMeatsDV.RowHeadersWidth = 51;
-            this.posMeatsDV.RowTemplate.Height = 24;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posMeatsDV.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.posMeatsDV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posMeatsDV.RowTemplate.Height = 48;
+            this.posMeatsDV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.posMeatsDV.Size = new System.Drawing.Size(889, 537);
             this.posMeatsDV.TabIndex = 59;
             this.posMeatsDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.posMeatsDV_CellClick_1);
@@ -800,7 +804,11 @@
             this.posDrinksDV.Name = "posDrinksDV";
             this.posDrinksDV.ReadOnly = true;
             this.posDrinksDV.RowHeadersWidth = 51;
-            this.posDrinksDV.RowTemplate.Height = 24;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posDrinksDV.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.posDrinksDV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posDrinksDV.RowTemplate.Height = 48;
+            this.posDrinksDV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.posDrinksDV.Size = new System.Drawing.Size(889, 536);
             this.posDrinksDV.TabIndex = 60;
             this.posDrinksDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.posDrinksDV_CellClick);
@@ -892,7 +900,11 @@
             this.posFruitsDV.Name = "posFruitsDV";
             this.posFruitsDV.ReadOnly = true;
             this.posFruitsDV.RowHeadersWidth = 51;
-            this.posFruitsDV.RowTemplate.Height = 24;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posFruitsDV.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.posFruitsDV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posFruitsDV.RowTemplate.Height = 48;
+            this.posFruitsDV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.posFruitsDV.Size = new System.Drawing.Size(889, 537);
             this.posFruitsDV.TabIndex = 61;
             this.posFruitsDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.posFruitsDV_CellClick);
@@ -901,6 +913,8 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Orange;
+            this.panel11.Controls.Add(this.label3);
+            this.panel11.Controls.Add(this.productCost);
             this.panel11.Controls.Add(this.label2);
             this.panel11.Controls.Add(this.productIdTB);
             this.panel11.Controls.Add(this.label1);
@@ -909,10 +923,121 @@
             this.panel11.Controls.Add(this.label17);
             this.panel11.Controls.Add(this.productPrice);
             this.panel11.Controls.Add(this.productNameTB);
-            this.panel11.Location = new System.Drawing.Point(9, 104);
+            this.panel11.Location = new System.Drawing.Point(9, 86);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(190, 327);
+            this.panel11.Size = new System.Drawing.Size(190, 335);
             this.panel11.TabIndex = 58;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(6, 158);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 24);
+            this.label3.TabIndex = 71;
+            this.label3.Text = "Cost:";
+            // 
+            // productCost
+            // 
+            this.productCost.BackColor = System.Drawing.Color.White;
+            this.productCost.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productCost.Font = new System.Drawing.Font("Bebas Neue", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productCost.Location = new System.Drawing.Point(10, 185);
+            this.productCost.Name = "productCost";
+            this.productCost.ReadOnly = true;
+            this.productCost.Size = new System.Drawing.Size(80, 40);
+            this.productCost.TabIndex = 70;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(6, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 24);
+            this.label2.TabIndex = 69;
+            this.label2.Text = "Product ID:";
+            // 
+            // productIdTB
+            // 
+            this.productIdTB.BackColor = System.Drawing.Color.White;
+            this.productIdTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productIdTB.Font = new System.Drawing.Font("Bebas Neue", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productIdTB.Location = new System.Drawing.Point(10, 67);
+            this.productIdTB.Name = "productIdTB";
+            this.productIdTB.ReadOnly = true;
+            this.productIdTB.Size = new System.Drawing.Size(170, 28);
+            this.productIdTB.TabIndex = 65;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(6, 228);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Current Stock:";
+            // 
+            // productStockTB
+            // 
+            this.productStockTB.BackColor = System.Drawing.Color.White;
+            this.productStockTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productStockTB.Font = new System.Drawing.Font("Bebas Neue", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productStockTB.Location = new System.Drawing.Point(11, 258);
+            this.productStockTB.Name = "productStockTB";
+            this.productStockTB.ReadOnly = true;
+            this.productStockTB.Size = new System.Drawing.Size(170, 40);
+            this.productStockTB.TabIndex = 67;
+            this.productStockTB.TextChanged += new System.EventHandler(this.productStockTB_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(96, 158);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(54, 24);
+            this.label18.TabIndex = 66;
+            this.label18.Text = "Retail:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(6, 98);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(107, 24);
+            this.label17.TabIndex = 66;
+            this.label17.Text = "Product Name:";
+            // 
+            // productPrice
+            // 
+            this.productPrice.BackColor = System.Drawing.Color.White;
+            this.productPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productPrice.Font = new System.Drawing.Font("Bebas Neue", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productPrice.Location = new System.Drawing.Point(100, 185);
+            this.productPrice.Name = "productPrice";
+            this.productPrice.ReadOnly = true;
+            this.productPrice.Size = new System.Drawing.Size(80, 40);
+            this.productPrice.TabIndex = 64;
+            // 
+            // productNameTB
+            // 
+            this.productNameTB.BackColor = System.Drawing.Color.White;
+            this.productNameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productNameTB.Font = new System.Drawing.Font("Bebas Neue", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productNameTB.Location = new System.Drawing.Point(10, 125);
+            this.productNameTB.Name = "productNameTB";
+            this.productNameTB.ReadOnly = true;
+            this.productNameTB.Size = new System.Drawing.Size(170, 28);
+            this.productNameTB.TabIndex = 64;
             // 
             // button14
             // 
@@ -920,7 +1045,7 @@
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(32, 146);
+            this.button14.Location = new System.Drawing.Point(32, 169);
             this.button14.Margin = new System.Windows.Forms.Padding(0);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(131, 44);
@@ -934,7 +1059,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(9, 9);
+            this.label16.Location = new System.Drawing.Point(9, 16);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(72, 24);
             this.label16.TabIndex = 67;
@@ -946,7 +1071,7 @@
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(32, 95);
+            this.button15.Location = new System.Drawing.Point(32, 118);
             this.button15.Margin = new System.Windows.Forms.Padding(0);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(131, 44);
@@ -955,56 +1080,12 @@
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click_1);
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(9, 154);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 24);
-            this.label18.TabIndex = 66;
-            this.label18.Text = "Price:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(8, 94);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(107, 24);
-            this.label17.TabIndex = 66;
-            this.label17.Text = "Product Name:";
-            // 
-            // productPrice
-            // 
-            this.productPrice.BackColor = System.Drawing.Color.White;
-            this.productPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productPrice.Font = new System.Drawing.Font("Bebas Neue", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productPrice.Location = new System.Drawing.Point(10, 181);
-            this.productPrice.Name = "productPrice";
-            this.productPrice.ReadOnly = true;
-            this.productPrice.Size = new System.Drawing.Size(170, 28);
-            this.productPrice.TabIndex = 64;
-            // 
-            // productNameTB
-            // 
-            this.productNameTB.BackColor = System.Drawing.Color.White;
-            this.productNameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productNameTB.Font = new System.Drawing.Font("Bebas Neue", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productNameTB.Location = new System.Drawing.Point(10, 121);
-            this.productNameTB.Name = "productNameTB";
-            this.productNameTB.ReadOnly = true;
-            this.productNameTB.Size = new System.Drawing.Size(170, 28);
-            this.productNameTB.TabIndex = 64;
-            // 
             // productPurchaseQuantity
             // 
             this.productPurchaseQuantity.BackColor = System.Drawing.Color.White;
             this.productPurchaseQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productPurchaseQuantity.Font = new System.Drawing.Font("Bebas Neue", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productPurchaseQuantity.Location = new System.Drawing.Point(10, 37);
+            this.productPurchaseQuantity.Location = new System.Drawing.Point(10, 44);
             this.productPurchaseQuantity.Name = "productPurchaseQuantity";
             this.productPurchaseQuantity.Size = new System.Drawing.Size(170, 45);
             this.productPurchaseQuantity.TabIndex = 65;
@@ -1023,10 +1104,36 @@
             // panel21
             // 
             this.panel21.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel21.Location = new System.Drawing.Point(9, 20);
+            this.panel21.Controls.Add(this.productProfit);
+            this.panel21.Controls.Add(this.label5);
+            this.panel21.Location = new System.Drawing.Point(9, 10);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(190, 78);
+            this.panel21.Size = new System.Drawing.Size(190, 80);
             this.panel21.TabIndex = 71;
+            // 
+            // productProfit
+            // 
+            this.productProfit.BackColor = System.Drawing.Color.White;
+            this.productProfit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productProfit.Font = new System.Drawing.Font("Bebas Neue", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productProfit.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.productProfit.Location = new System.Drawing.Point(10, 37);
+            this.productProfit.Name = "productProfit";
+            this.productProfit.ReadOnly = true;
+            this.productProfit.Size = new System.Drawing.Size(170, 28);
+            this.productProfit.TabIndex = 71;
+            this.productProfit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(6, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 24);
+            this.label5.TabIndex = 70;
+            this.label5.Text = "Profit:";
             // 
             // panel20
             // 
@@ -1035,55 +1142,10 @@
             this.panel20.Controls.Add(this.button14);
             this.panel20.Controls.Add(this.button15);
             this.panel20.Controls.Add(this.productPurchaseQuantity);
-            this.panel20.Location = new System.Drawing.Point(9, 437);
+            this.panel20.Location = new System.Drawing.Point(9, 421);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(190, 203);
+            this.panel20.Size = new System.Drawing.Size(190, 227);
             this.panel20.TabIndex = 70;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(11, 215);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 24);
-            this.label1.TabIndex = 68;
-            this.label1.Text = "Current Stock:";
-            // 
-            // productStockTB
-            // 
-            this.productStockTB.BackColor = System.Drawing.Color.White;
-            this.productStockTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productStockTB.Font = new System.Drawing.Font("Bebas Neue", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productStockTB.Location = new System.Drawing.Point(12, 242);
-            this.productStockTB.Name = "productStockTB";
-            this.productStockTB.ReadOnly = true;
-            this.productStockTB.Size = new System.Drawing.Size(170, 28);
-            this.productStockTB.TabIndex = 67;
-            this.productStockTB.TextChanged += new System.EventHandler(this.productStockTB_TextChanged);
-            // 
-            // productIdTB
-            // 
-            this.productIdTB.BackColor = System.Drawing.Color.White;
-            this.productIdTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productIdTB.Font = new System.Drawing.Font("Bebas Neue", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productIdTB.Location = new System.Drawing.Point(10, 63);
-            this.productIdTB.Name = "productIdTB";
-            this.productIdTB.ReadOnly = true;
-            this.productIdTB.Size = new System.Drawing.Size(170, 28);
-            this.productIdTB.TabIndex = 65;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(8, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 24);
-            this.label2.TabIndex = 69;
-            this.label2.Text = "Product ID:";
             // 
             // SalesPOS
             // 
@@ -1146,6 +1208,8 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel19.ResumeLayout(false);
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             this.ResumeLayout(false);
@@ -1207,7 +1271,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox productPrice;
         private System.Windows.Forms.TextBox productNameTB;
         private System.Windows.Forms.TextBox productPurchaseQuantity;
         private System.Windows.Forms.Panel panel4;
@@ -1231,5 +1294,10 @@
         private System.Windows.Forms.TextBox productStockTB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox productIdTB;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox productCost;
+        private System.Windows.Forms.TextBox productPrice;
+        private System.Windows.Forms.TextBox productProfit;
+        private System.Windows.Forms.Label label5;
     }
 }

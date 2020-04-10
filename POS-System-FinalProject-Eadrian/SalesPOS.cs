@@ -44,13 +44,18 @@ namespace POSSystemOOPFinals
         }
 
         public string purchaseValue;
-
+        public string purchaseProfit;
+        public string purchaseReceipt; 
 
         private void button2_Click(object sender, EventArgs e)
         {
             purchaseValue = posTotalPrice.Text;
+            purchaseProfit = productProfit.Text;
+            purchaseReceipt = posPurchaseTB.Text;
             posCheckout posUc = new posCheckout();
             posUc.transactionValue(purchaseValue.ToString());
+            posUc.profitValue(purchaseProfit.ToString());
+            posUc.printReceipt(purchaseReceipt.ToString());
             posUc.ShowDialog();
         }
 
@@ -162,38 +167,46 @@ namespace POSSystemOOPFinals
             MongoClient client = new MongoClient();
             IMongoDatabase pDatabase = client.GetDatabase("Products");
             IMongoCollection<Product> records = pDatabase.GetCollection<Product>("productList");
-            var productPurchase = int.Parse(productStockTB.Text) - int.Parse(productPurchaseQuantity.Text);
 
-            if ((int.Parse(productPurchaseQuantity.Text) <= int.Parse(productStockTB.Text)) == true)
+            if (productPurchaseQuantity.Text != "")
             {
-                var recordsUpdate = Builders<Product>.Update.Set(p => p.productQuantity, productPurchase.ToString());
-                records.UpdateOne(s => s.Id == ObjectId.Parse(productIdTB.Text), recordsUpdate);
-           
-                    var oldValue = int.Parse(posTotalPrice.Text);
-                    if (productPurchaseQuantity.Text == "")
-                    {
-                        MessageBox.Show("[!] Please Enter the desired quantity for the product");
-                    }
-                    else
-                    {
-                        var newValue = int.Parse(productPrice.Text) * int.Parse(productPurchaseQuantity.Text);
-                        posTotalPrice.Text = (oldValue + newValue).ToString();
-                        posPurchaseTB.Text += "> " + productNameTB.Text + " x" + productPurchaseQuantity.Text + " = " + newValue.ToString() + Environment.NewLine;
-                        productIdTB.Text = "";
-                        productNameTB.Text = "";
-                        productPrice.Text = "";
-                        productPurchaseQuantity.Text = "";
-                        productStockTB.Text = "";
-                    }
-                
+                var productPurchase = int.Parse(productStockTB.Text) - int.Parse(productPurchaseQuantity.Text);
+
+                if ((int.Parse(productPurchaseQuantity.Text) <= int.Parse(productStockTB.Text)) == true)
+                {
+                    var recordsUpdate = Builders<Product>.Update.Set(p => p.productQuantity, productPurchase.ToString());
+                    records.UpdateOne(s => s.Id == ObjectId.Parse(productIdTB.Text), recordsUpdate);
+
+                    var oldValueP = int.Parse(posTotalPrice.Text);
+                    var oldValueR = int.Parse(productProfit.Text);
+                    
+                    var newValueP = int.Parse(productPrice.Text) * int.Parse(productPurchaseQuantity.Text);
+                    posTotalPrice.Text = (oldValueP + newValueP).ToString();
+                    var newValueR = int.Parse(productCost.Text) * int.Parse(productPurchaseQuantity.Text);
+                    var newProfit = (newValueP - newValueR);
+                    productProfit.Text = (oldValueR + newProfit).ToString();
+                    posPurchaseTB.Text += "> " + productNameTB.Text + " x" + productPurchaseQuantity.Text + " = " + newValueP.ToString() + Environment.NewLine;
+                    productIdTB.Text = "";
+                    productNameTB.Text = "";
+                    productPrice.Text = "";
+                    productCost.Text = "";
+                    productPurchaseQuantity.Text = "";
+                    productStockTB.Text = "";
+                }
+
+                else
+                {
+                    MessageBox.Show("[!] Insufficient Stocks, Please Try Again!");
+                }
             }
 
             else
             {
-                MessageBox.Show("[!] Insufficient Stocks, Please Try Again!");
+                MessageBox.Show("[!] Please Enter the desired quantity for the product");
             }
-
         }
+
+        
 
         private void button14_Click_1(object sender, EventArgs e)
         {
@@ -205,6 +218,7 @@ namespace POSSystemOOPFinals
         private void SalesPOS_Load(object sender, EventArgs e)
         {
             posTotalPrice.Text = "0";
+            productProfit.Text = "0";
         }
 
 
@@ -213,6 +227,7 @@ namespace POSSystemOOPFinals
             productIdTB.Text = posSweetsDV.Rows[e.RowIndex].Cells[0].Value.ToString();
             productNameTB.Text = posSweetsDV.Rows[e.RowIndex].Cells[1].Value.ToString();
             productStockTB.Text = posSweetsDV.Rows[e.RowIndex].Cells[2].Value.ToString();
+            productCost.Text = posSweetsDV.Rows[e.RowIndex].Cells[3].Value.ToString();
             productPrice.Text = posSweetsDV.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
         private void posPastryDV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -220,6 +235,7 @@ namespace POSSystemOOPFinals
             productIdTB.Text = posPastryDV.Rows[e.RowIndex].Cells[0].Value.ToString();
             productNameTB.Text = posPastryDV.Rows[e.RowIndex].Cells[1].Value.ToString();
             productStockTB.Text = posPastryDV.Rows[e.RowIndex].Cells[2].Value.ToString();
+            productCost.Text = posPastryDV.Rows[e.RowIndex].Cells[3].Value.ToString();
             productPrice.Text = posPastryDV.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
@@ -228,6 +244,7 @@ namespace POSSystemOOPFinals
             productIdTB.Text = posMeatsDV.Rows[e.RowIndex].Cells[0].Value.ToString();
             productNameTB.Text = posMeatsDV.Rows[e.RowIndex].Cells[1].Value.ToString();
             productStockTB.Text = posMeatsDV.Rows[e.RowIndex].Cells[2].Value.ToString();
+            productCost.Text = posMeatsDV.Rows[e.RowIndex].Cells[3].Value.ToString();
             productPrice.Text = posMeatsDV.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
@@ -236,6 +253,7 @@ namespace POSSystemOOPFinals
             productIdTB.Text = posDrinksDV.Rows[e.RowIndex].Cells[0].Value.ToString();
             productNameTB.Text = posDrinksDV.Rows[e.RowIndex].Cells[1].Value.ToString();
             productStockTB.Text = posDrinksDV.Rows[e.RowIndex].Cells[2].Value.ToString();
+            productCost.Text = posDrinksDV.Rows[e.RowIndex].Cells[3].Value.ToString();
             productPrice.Text = posDrinksDV.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
@@ -244,6 +262,7 @@ namespace POSSystemOOPFinals
             productIdTB.Text = posFruitsDV.Rows[e.RowIndex].Cells[0].Value.ToString();
             productNameTB.Text = posFruitsDV.Rows[e.RowIndex].Cells[1].Value.ToString();
             productStockTB.Text = posFruitsDV.Rows[e.RowIndex].Cells[2].Value.ToString();
+            productCost.Text = posFruitsDV.Rows[e.RowIndex].Cells[3].Value.ToString();
             productPrice.Text = posFruitsDV.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 

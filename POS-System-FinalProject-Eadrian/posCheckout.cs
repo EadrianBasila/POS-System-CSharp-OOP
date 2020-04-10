@@ -19,11 +19,23 @@ namespace POS_System_FinalProject_Eadrian
             InitializeComponent();
         }
         public string tValue;
-
+        public string pValue;
+        public string rValue;
         public void transactionValue(string p)
         {
             tValue = p.ToString();
         }
+
+        public void profitValue(string p)
+        {
+            pValue = p.ToString();
+        }
+
+        public void printReceipt(string p)
+        {
+            rValue = p.ToString();
+        }
+
         private void ucBt1_Click(object sender, EventArgs e)
         {
             this.ucCashTendered.Text += "1";
@@ -43,13 +55,9 @@ namespace POS_System_FinalProject_Eadrian
         private void button3_Click(object sender, EventArgs e)
         {
             ucCashTendered.Text = "";
+            ucChange.Text = "";
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+            
         private void ucBt2_Click(object sender, EventArgs e)
         {
             this.ucCashTendered.Text += "2";
@@ -100,20 +108,26 @@ namespace POS_System_FinalProject_Eadrian
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var receipt = rValue.ToString();
+            MessageBox.Show("[Receipt]"+ Environment.NewLine + receipt);
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            //MongoClient client = new MongoClient();
-            //IMongoDatabase pDatabase = client.GetDatabase("Products");
-            //IMongoCollection<Product> records = pDatabase.GetCollection<Product>("productList");
+            recordDatabase pDatabase = new recordDatabase("Purchase");
+            purchaseRegistry newRecord = new purchaseRegistry
+            {
+                posPurchaseDate = posdateTimePicker.Value.ToShortDateString(),
+                posCost = ucTotalPrice.Text,
+                posRetail = ucProfit.Text
+            };
+            pDatabase.addRecords("purchaseRecords", newRecord);
 
-            //var recordsUpdate = Builders<Product>.Update.Set
-            //    (p => p.productQuantity, productQuantityTB.Text).Set
-            //    (p => p.productCost, productCostTB.Text).Set
-            //    (p => p.productRetail, productRetailTB.Text).Set
-            //    (p => p.productSupplier, productSupplierTB.Text).Set
-            //    (p => p.productCategory, productlistCategory.GetItemText(productlistCategory.SelectedItem).ToString()).Set
-            //    (p => p.productDate, productdateTimePicker.Value.ToShortDateString());
-            //records.UpdateOne(s => s.Id == ObjectId.Parse(productIdTB.Text), recordsUpdate);
+            SalesPOS formSalesPOS = new SalesPOS();
+            formSalesPOS.ShowDialog();
+            this.Close();
         }
 
         private void ucTotalPrice_TextChanged(object sender, EventArgs e)
@@ -124,6 +138,7 @@ namespace POS_System_FinalProject_Eadrian
         private void posCheckout_Load(object sender, EventArgs e)
         {
             ucTotalPrice.Text = tValue.ToString();
+            ucProfit.Text = pValue.ToString();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -140,6 +155,11 @@ namespace POS_System_FinalProject_Eadrian
                 ucCashTendered.Text = "";
 
             }
+        }
+
+        private void ucProfit_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

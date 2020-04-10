@@ -14,10 +14,14 @@ namespace POS_System_FinalProject_Eadrian
         [BsonId]
         public ObjectId Id { get; set; }
 
-        [BsonElement("purchaseRegistry")]
-        public string posPurchaseRegistry { get; set; }
+        [BsonElement("purchaseDate")]
+        public string posPurchaseDate { get; set; }
 
-        public string posCheckout { get; set; }
+        [BsonElement("purchaseCost")]
+        public string posCost { get; set; }
+
+        [BsonElement("purchaseRetail")]
+        public string posRetail { get; set; }
 
     }
 }
