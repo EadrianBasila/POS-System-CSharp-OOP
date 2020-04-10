@@ -224,6 +224,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "DELETE";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel7
             // 
@@ -383,6 +384,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "UPDATE";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -565,6 +567,8 @@
             this.adminAdminDV.RowTemplate.Height = 24;
             this.adminAdminDV.Size = new System.Drawing.Size(804, 619);
             this.adminAdminDV.TabIndex = 59;
+            this.adminAdminDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.adminAdminDV_CellClick);
+            this.adminAdminDV.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.adminAdminDV_DataBindingComplete);
             // 
             // panel11
             // 
@@ -595,6 +599,7 @@
             this.loadAdmin.TabIndex = 61;
             this.loadAdmin.Text = "Load People";
             this.loadAdmin.UseVisualStyleBackColor = true;
+            this.loadAdmin.Click += new System.EventHandler(this.loadAdmin_Click);
             // 
             // panel10
             // 
@@ -655,6 +660,7 @@
             this.adminEmployeeDV.RowTemplate.Height = 24;
             this.adminEmployeeDV.Size = new System.Drawing.Size(804, 619);
             this.adminEmployeeDV.TabIndex = 59;
+            this.adminEmployeeDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.adminEmployeeDV_CellClick);
             // 
             // panel17
             // 
@@ -685,6 +691,7 @@
             this.loadEmployee.TabIndex = 61;
             this.loadEmployee.Text = "Load People";
             this.loadEmployee.UseVisualStyleBackColor = true;
+            this.loadEmployee.Click += new System.EventHandler(this.loadEmployee_Click);
             // 
             // panel15
             // 

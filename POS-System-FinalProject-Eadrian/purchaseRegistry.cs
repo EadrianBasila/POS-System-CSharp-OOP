@@ -20,8 +20,8 @@ namespace POS_System_FinalProject_Eadrian
         [BsonElement("purchaseCost")]
         public string posCost { get; set; }
 
-        [BsonElement("purchaseRetail")]
-        public string posRetail { get; set; }
+        [BsonElement("purchaseProfit")]
+        public string purchaseProfit { get; set; }
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using POS_System_FinalProject_Eadrian;
 
 namespace POSSystemOOPFinals
 {
@@ -18,6 +19,7 @@ namespace POSSystemOOPFinals
         public string loginPassword { get; set; }
 
         [BsonElement("employeeSalary")]
+        [BsonSerializer(typeof(BsonStringNumericSerializer))]
         public string employeeSalary { get; set; }
 
         [BsonElement("employeeCategory")]
@@ -25,16 +27,7 @@ namespace POSSystemOOPFinals
 
         [BsonElement("employeeDateHired")]
         public string dateHired { get; set; }
-
-        public Workforce(string employeeName, string loginUsername, string loginPassword, string employeeSalary, string employeeCategory, string dateHired)
-        {
-            this.employeeName = employeeName;
-            this.loginUsername = loginUsername;
-            this.loginPassword = loginPassword;
-            this.employeeSalary = employeeSalary;
-            this.employeeCategory = employeeCategory;
-            this.dateHired = dateHired;
-        }
+               
     }
 }
 

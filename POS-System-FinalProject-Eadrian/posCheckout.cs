@@ -121,7 +121,7 @@ namespace POS_System_FinalProject_Eadrian
             {
                 posPurchaseDate = posdateTimePicker.Value.ToShortDateString(),
                 posCost = ucTotalPrice.Text,
-                posRetail = ucProfit.Text
+                purchaseProfit = ucProfit.Text
             };
             pDatabase.addRecords("purchaseRecords", newRecord);
 

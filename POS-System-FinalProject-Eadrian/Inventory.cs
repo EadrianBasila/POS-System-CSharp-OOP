@@ -108,7 +108,6 @@ namespace POS_System_FinalProject_Eadrian
                 productCost = productCostTB.Text,
                 productRetail = productRetailTB.Text,
                 productSupplier = productSupplierTB.Text,
-                //productCategory = productlistCategory.GetItemText(productlistCategory.SelectedItem).ToString(),
                 productCategory = productlistCategory.SelectedItem.ToString(),
                 productDate = productdateTimePicker.Value.ToShortDateString()
 
@@ -379,6 +378,11 @@ namespace POS_System_FinalProject_Eadrian
         }
 
         private void productQuantityTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
