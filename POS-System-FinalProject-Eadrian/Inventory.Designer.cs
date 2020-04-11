@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -37,6 +37,8 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dashboardIcon = new System.Windows.Forms.PictureBox();
             this.inventoryIcon = new System.Windows.Forms.PictureBox();
@@ -110,12 +112,11 @@
             this.label16 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportIcon)).BeginInit();
@@ -150,7 +151,6 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -238,6 +238,26 @@
             this.panel3.Size = new System.Drawing.Size(140, 786);
             this.panel3.TabIndex = 16;
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel10.Location = new System.Drawing.Point(17, 647);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(101, 15);
+            this.panel10.TabIndex = 17;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 659);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 98);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Red;
@@ -266,6 +286,7 @@
             this.inventoryIcon.Size = new System.Drawing.Size(101, 98);
             this.inventoryIcon.TabIndex = 11;
             this.inventoryIcon.TabStop = false;
+            this.inventoryIcon.Click += new System.EventHandler(this.inventoryIcon_Click);
             // 
             // reportIcon
             // 
@@ -328,10 +349,10 @@
             this.invSweetsDV.Name = "invSweetsDV";
             this.invSweetsDV.ReadOnly = true;
             this.invSweetsDV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            this.invSweetsDV.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            this.invSweetsDV.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.invSweetsDV.RowTemplate.Height = 24;
             this.invSweetsDV.Size = new System.Drawing.Size(804, 619);
             this.invSweetsDV.TabIndex = 59;
@@ -1099,25 +1120,6 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel10.Location = new System.Drawing.Point(16, 647);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(101, 15);
-            this.panel10.TabIndex = 17;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 659);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(101, 98);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1141,6 +1143,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportIcon)).EndInit();
@@ -1183,7 +1186,6 @@
             this.panel7.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

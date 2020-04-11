@@ -116,6 +116,8 @@
             this.productProfit = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -157,6 +159,7 @@
             this.panel19.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel9
@@ -384,6 +387,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.panel26);
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.dashboardIcon);
             this.panel3.Controls.Add(this.inventoryIcon);
@@ -1147,6 +1152,25 @@
             this.panel20.Size = new System.Drawing.Size(190, 227);
             this.panel20.TabIndex = 70;
             // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel26.Location = new System.Drawing.Point(17, 652);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(101, 15);
+            this.panel26.TabIndex = 19;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 664);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 98);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // SalesPOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1212,6 +1236,7 @@
             this.panel21.PerformLayout();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1299,5 +1324,7 @@
         private System.Windows.Forms.TextBox productPrice;
         private System.Windows.Forms.TextBox productProfit;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

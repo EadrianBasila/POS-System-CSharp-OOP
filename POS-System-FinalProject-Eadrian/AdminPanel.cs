@@ -43,7 +43,7 @@ namespace POS_System_FinalProject_Eadrian
                     loginPassword = employeePasswordTB.Text,
                     employeeSalary = employeeSalaryTB.Text,
                     employeeCategory = peepsCategory.SelectedItem.ToString(),
-                    dateHired = approductdateTimePicker.Value.ToShortDateString()
+                    dateHired = apdateTimePicker.Value.ToShortDateString()
                 };
                 pDatabase.addRecords("adminPeeps", newPeeps);
             }
@@ -57,7 +57,7 @@ namespace POS_System_FinalProject_Eadrian
                     loginPassword = employeePasswordTB.Text,
                     employeeSalary = employeeSalaryTB.Text,
                     employeeCategory = peepsCategory.SelectedItem.ToString(),
-                    dateHired = approductdateTimePicker.Value.ToShortDateString()
+                    dateHired = apdateTimePicker.Value.ToShortDateString()
                 };
                 pDatabase.addRecords("Peeps", newPeeps);
             }
@@ -81,7 +81,7 @@ namespace POS_System_FinalProject_Eadrian
                     (p => p.loginPassword, employeePasswordTB.Text).Set
                     (p => p.employeeSalary, employeeSalaryTB.Text).Set
                     (p => p.employeeCategory, peepsCategory.GetItemText(peepsCategory.SelectedItem).ToString()).Set
-                    (p => p.dateHired, approductdateTimePicker.Value.ToShortDateString());
+                    (p => p.dateHired, apdateTimePicker.Value.ToShortDateString());
                 records.UpdateOne(s => s.Id == ObjectId.Parse(employeeIdTB.Text), recordsUpdate);
             }
             else 
@@ -94,7 +94,7 @@ namespace POS_System_FinalProject_Eadrian
                     (p => p.loginPassword, employeePasswordTB.Text).Set
                     (p => p.employeeSalary, employeeSalaryTB.Text).Set
                     (p => p.employeeCategory, peepsCategory.GetItemText(peepsCategory.SelectedItem).ToString()).Set
-                    (p => p.dateHired, approductdateTimePicker.Value.ToShortDateString());
+                    (p => p.dateHired, apdateTimePicker.Value.ToShortDateString());
                 records.UpdateOne(s => s.Id == ObjectId.Parse(employeeIdTB.Text), recordsUpdate);
             }
 
@@ -142,7 +142,7 @@ namespace POS_System_FinalProject_Eadrian
             employeePasswordTB.Text = adminAdminDV.Rows[0].Cells[3].Value.ToString();
             employeeSalaryTB.Text = adminAdminDV.Rows[0].Cells[4].Value.ToString();
             peepsCategory.Text= adminAdminDV.Rows[0].Cells[5].Value.ToString();
-            approductdateTimePicker.Value = Convert.ToDateTime(adminAdminDV.Rows[0].Cells[7].Value.ToString());
+            apdateTimePicker.Value = Convert.ToDateTime(adminAdminDV.Rows[0].Cells[6].Value.ToString());
         }
 
         private void loadEmployee_Click(object sender, EventArgs e)
@@ -160,7 +160,7 @@ namespace POS_System_FinalProject_Eadrian
             employeePasswordTB.Text = adminEmployeeDV.Rows[0].Cells[3].Value.ToString();
             employeeSalaryTB.Text = adminEmployeeDV.Rows[0].Cells[4].Value.ToString();
             peepsCategory.Text = adminEmployeeDV.Rows[0].Cells[5].Value.ToString();
-            approductdateTimePicker.Value = Convert.ToDateTime(adminEmployeeDV.Rows[0].Cells[7].Value.ToString());
+            apdateTimePicker.Value = Convert.ToDateTime(adminEmployeeDV.Rows[0].Cells[6].Value.ToString());
         }
 
         private void adminAdminDV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -171,7 +171,7 @@ namespace POS_System_FinalProject_Eadrian
             employeePasswordTB.Text = adminAdminDV.Rows[e.RowIndex].Cells[3].Value.ToString();
             employeeSalaryTB.Text = adminAdminDV.Rows[e.RowIndex].Cells[4].Value.ToString();
             peepsCategory.Text = adminAdminDV.Rows[e.RowIndex].Cells[5].Value.ToString();
-            approductdateTimePicker.Text = adminAdminDV.Rows[e.RowIndex].Cells[7].Value.ToString();       
+            apdateTimePicker.Text = adminAdminDV.Rows[e.RowIndex].Cells[6].Value.ToString();       
         }
 
         private void adminEmployeeDV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -182,7 +182,47 @@ namespace POS_System_FinalProject_Eadrian
             employeePasswordTB.Text = adminEmployeeDV.Rows[e.RowIndex].Cells[3].Value.ToString();
             employeeSalaryTB.Text = adminEmployeeDV.Rows[e.RowIndex].Cells[4].Value.ToString();
             peepsCategory.Text = adminEmployeeDV.Rows[e.RowIndex].Cells[5].Value.ToString();
-            approductdateTimePicker.Text = adminEmployeeDV.Rows[e.RowIndex].Cells[7].Value.ToString();
+            apdateTimePicker.Text = adminEmployeeDV.Rows[e.RowIndex].Cells[6].Value.ToString();
+        }
+
+        private void loadSales_Click(object sender, EventArgs e)
+        {
+            recordDatabase pDatabase = new recordDatabase("Purchase");
+            var records = pDatabase.checkRecords<purchaseRegistry>("purchaseRecords");          
+            adminSalesDV.DataSource = records;
+            adminSalesDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+        }
+
+        private void loadShifts_Click(object sender, EventArgs e)
+        {
+            recordDatabase pDatabase = new recordDatabase("EmployeeShifts");
+            var records = pDatabase.checkRecords<Workshift>("workShifts");
+            adminShiftsDV.DataSource = records;
+            adminShiftsDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+        }
+
+        private void dashboardIcon_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard formDashboard = new Dashboard();
+            formDashboard.ShowDialog();
+            this.Close();
+        }
+
+        private void posIcon_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SalesPOS formSalesP = new SalesPOS();
+            formSalesP.ShowDialog();
+            this.Close();
+        }
+
+        private void inventoryIcon_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Inventory formInventory = new Inventory();
+            formInventory.ShowDialog();
+            this.Close();
         }
     }
 }

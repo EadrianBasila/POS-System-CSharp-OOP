@@ -98,6 +98,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="accessPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accessPanel.Designer.cs">
+      <DependentUpon>accessPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,10 @@
       <DependentUpon>SalesPOS.cs</DependentUpon>
     </Compile>
     <Compile Include="Workforce.cs" />
+    <Compile Include="Workshift.cs" />
+    <EmbeddedResource Include="accessPanel.resx">
+      <DependentUpon>accessPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </EmbeddedResource>

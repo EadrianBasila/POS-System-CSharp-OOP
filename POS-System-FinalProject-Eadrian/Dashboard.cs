@@ -13,11 +13,6 @@ namespace POSSystemOOPFinals
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
@@ -227,6 +222,14 @@ namespace POSSystemOOPFinals
         private void dbgrossLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click_2(object sender, EventArgs e)
+        {
+      
+            accessPanel formAP = new accessPanel();
+            formAP.ShowDialog();
+            this.Close();
         }
     }
 }

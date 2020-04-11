@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanel));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -43,8 +43,10 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.peepsCategory = new System.Windows.Forms.ListBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.approductdateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.apdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.employeeSalaryTB = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -60,13 +62,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dashboardIcon = new System.Windows.Forms.PictureBox();
             this.inventoryIcon = new System.Windows.Forms.PictureBox();
             this.reportIcon = new System.Windows.Forms.PictureBox();
             this.posIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.adminTabs = new System.Windows.Forms.TabControl();
             this.tabAdmin = new System.Windows.Forms.TabPage();
             this.adminAdminDV = new System.Windows.Forms.DataGridView();
@@ -84,8 +86,22 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.posMeats = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.peepsCategory = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.tabSales = new System.Windows.Forms.TabPage();
+            this.adminSalesDV = new System.Windows.Forms.DataGridView();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.loadSales = new System.Windows.Forms.Button();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.tabWorkshift = new System.Windows.Forms.TabPage();
+            this.adminShiftsDV = new System.Windows.Forms.DataGridView();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.loadShifts = new System.Windows.Forms.Button();
+            this.panel21 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -94,11 +110,11 @@
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.posIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.adminTabs.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adminAdminDV)).BeginInit();
@@ -110,6 +126,16 @@
             this.panel18.SuspendLayout();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.posMeats)).BeginInit();
+            this.tabSales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.adminSalesDV)).BeginInit();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel14.SuspendLayout();
+            this.tabWorkshift.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.adminShiftsDV)).BeginInit();
+            this.panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel20.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,7 +155,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(412, 11);
+            this.panel8.Location = new System.Drawing.Point(428, 9);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(10, 59);
             this.panel8.TabIndex = 9;
@@ -253,7 +279,7 @@
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.peepsCategory);
             this.panel6.Controls.Add(this.label9);
-            this.panel6.Controls.Add(this.approductdateTimePicker);
+            this.panel6.Controls.Add(this.apdateTimePicker);
             this.panel6.Controls.Add(this.employeeSalaryTB);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.label6);
@@ -272,6 +298,31 @@
             this.panel6.Size = new System.Drawing.Size(459, 422);
             this.panel6.TabIndex = 43;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label4.Location = new System.Drawing.Point(228, 201);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 24);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Category:";
+            // 
+            // peepsCategory
+            // 
+            this.peepsCategory.BackColor = System.Drawing.Color.Gainsboro;
+            this.peepsCategory.Font = new System.Drawing.Font("Bebas Neue", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.peepsCategory.FormattingEnabled = true;
+            this.peepsCategory.ItemHeight = 21;
+            this.peepsCategory.Items.AddRange(new object[] {
+            "Administrator",
+            "Employee"});
+            this.peepsCategory.Location = new System.Drawing.Point(232, 228);
+            this.peepsCategory.Name = "peepsCategory";
+            this.peepsCategory.Size = new System.Drawing.Size(198, 25);
+            this.peepsCategory.TabIndex = 17;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -284,13 +335,13 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "Date Hired:";
             // 
-            // approductdateTimePicker
+            // apdateTimePicker
             // 
-            this.approductdateTimePicker.Font = new System.Drawing.Font("Bebas Neue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.approductdateTimePicker.Location = new System.Drawing.Point(185, 283);
-            this.approductdateTimePicker.Name = "approductdateTimePicker";
-            this.approductdateTimePicker.Size = new System.Drawing.Size(245, 28);
-            this.approductdateTimePicker.TabIndex = 15;
+            this.apdateTimePicker.Font = new System.Drawing.Font("Bebas Neue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apdateTimePicker.Location = new System.Drawing.Point(185, 283);
+            this.apdateTimePicker.Name = "apdateTimePicker";
+            this.apdateTimePicker.Size = new System.Drawing.Size(245, 28);
+            this.apdateTimePicker.TabIndex = 15;
             // 
             // employeeSalaryTB
             // 
@@ -457,6 +508,24 @@
             this.panel3.Size = new System.Drawing.Size(140, 786);
             this.panel3.TabIndex = 46;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel2.Location = new System.Drawing.Point(17, 637);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(101, 15);
+            this.panel2.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 649);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 98);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Red;
@@ -474,6 +543,7 @@
             this.dashboardIcon.Size = new System.Drawing.Size(101, 98);
             this.dashboardIcon.TabIndex = 12;
             this.dashboardIcon.TabStop = false;
+            this.dashboardIcon.Click += new System.EventHandler(this.dashboardIcon_Click);
             // 
             // inventoryIcon
             // 
@@ -484,6 +554,7 @@
             this.inventoryIcon.Size = new System.Drawing.Size(101, 98);
             this.inventoryIcon.TabIndex = 11;
             this.inventoryIcon.TabStop = false;
+            this.inventoryIcon.Click += new System.EventHandler(this.inventoryIcon_Click);
             // 
             // reportIcon
             // 
@@ -504,29 +575,14 @@
             this.posIcon.Size = new System.Drawing.Size(101, 98);
             this.posIcon.TabIndex = 9;
             this.posIcon.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 649);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(101, 98);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel2.Location = new System.Drawing.Point(17, 637);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(101, 15);
-            this.panel2.TabIndex = 15;
+            this.posIcon.Click += new System.EventHandler(this.posIcon_Click);
             // 
             // adminTabs
             // 
             this.adminTabs.Controls.Add(this.tabAdmin);
             this.adminTabs.Controls.Add(this.tabEmployee);
+            this.adminTabs.Controls.Add(this.tabSales);
+            this.adminTabs.Controls.Add(this.tabWorkshift);
             this.adminTabs.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminTabs.Location = new System.Drawing.Point(166, 116);
             this.adminTabs.Name = "adminTabs";
@@ -560,10 +616,10 @@
             this.adminAdminDV.Name = "adminAdminDV";
             this.adminAdminDV.ReadOnly = true;
             this.adminAdminDV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            this.adminAdminDV.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            this.adminAdminDV.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.adminAdminDV.RowTemplate.Height = 24;
             this.adminAdminDV.Size = new System.Drawing.Size(804, 619);
             this.adminAdminDV.TabIndex = 59;
@@ -617,11 +673,11 @@
             this.label11.BackColor = System.Drawing.Color.DodgerBlue;
             this.label11.Font = new System.Drawing.Font("dark forest", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(5, 155);
+            this.label11.Location = new System.Drawing.Point(15, 155);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 49);
+            this.label11.Size = new System.Drawing.Size(103, 49);
             this.label11.TabIndex = 40;
-            this.label11.Text = "ADMIN";
+            this.label11.Text = "Admin";
             // 
             // posSweets
             // 
@@ -719,36 +775,193 @@
             this.label13.BackColor = System.Drawing.Color.DodgerBlue;
             this.label13.Font = new System.Drawing.Font("dark forest", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(1, 154);
+            this.label13.Location = new System.Drawing.Point(-4, 154);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(147, 43);
             this.label13.TabIndex = 40;
             this.label13.Text = "Employee";
             // 
-            // peepsCategory
+            // tabSales
             // 
-            this.peepsCategory.BackColor = System.Drawing.Color.Gainsboro;
-            this.peepsCategory.Font = new System.Drawing.Font("Bebas Neue", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.peepsCategory.FormattingEnabled = true;
-            this.peepsCategory.ItemHeight = 21;
-            this.peepsCategory.Items.AddRange(new object[] {
-            "Administrator",
-            "Employee"});
-            this.peepsCategory.Location = new System.Drawing.Point(232, 228);
-            this.peepsCategory.Name = "peepsCategory";
-            this.peepsCategory.Size = new System.Drawing.Size(198, 25);
-            this.peepsCategory.TabIndex = 17;
+            this.tabSales.Controls.Add(this.adminSalesDV);
+            this.tabSales.Controls.Add(this.panel12);
+            this.tabSales.Controls.Add(this.panel14);
+            this.tabSales.Controls.Add(this.panel16);
+            this.tabSales.Location = new System.Drawing.Point(4, 45);
+            this.tabSales.Name = "tabSales";
+            this.tabSales.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSales.Size = new System.Drawing.Size(1029, 658);
+            this.tabSales.TabIndex = 3;
+            this.tabSales.Text = "Sales";
+            this.tabSales.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // adminSalesDV
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(228, 201);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 24);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Category:";
+            this.adminSalesDV.AllowUserToAddRows = false;
+            this.adminSalesDV.AllowUserToDeleteRows = false;
+            this.adminSalesDV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adminSalesDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.adminSalesDV.Location = new System.Drawing.Point(18, 20);
+            this.adminSalesDV.Name = "adminSalesDV";
+            this.adminSalesDV.ReadOnly = true;
+            this.adminSalesDV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.adminSalesDV.RowTemplate.Height = 24;
+            this.adminSalesDV.Size = new System.Drawing.Size(804, 619);
+            this.adminSalesDV.TabIndex = 63;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel12.Controls.Add(this.pictureBox2);
+            this.panel12.Controls.Add(this.label8);
+            this.panel12.Location = new System.Drawing.Point(832, 20);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(178, 209);
+            this.panel12.TabIndex = 60;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 28);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox2.TabIndex = 41;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label8.Font = new System.Drawing.Font("dark forest", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(17, 161);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(98, 43);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Sales";
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.Orange;
+            this.panel14.Controls.Add(this.loadSales);
+            this.panel14.Location = new System.Drawing.Point(832, 229);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(178, 122);
+            this.panel14.TabIndex = 61;
+            // 
+            // loadSales
+            // 
+            this.loadSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loadSales.Font = new System.Drawing.Font("Bebas Neue", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadSales.ForeColor = System.Drawing.Color.White;
+            this.loadSales.Location = new System.Drawing.Point(15, 36);
+            this.loadSales.Margin = new System.Windows.Forms.Padding(0);
+            this.loadSales.Name = "loadSales";
+            this.loadSales.Size = new System.Drawing.Size(148, 51);
+            this.loadSales.TabIndex = 61;
+            this.loadSales.Text = "Load Sales";
+            this.loadSales.UseVisualStyleBackColor = true;
+            this.loadSales.Click += new System.EventHandler(this.loadSales_Click);
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel16.Location = new System.Drawing.Point(832, 350);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(178, 289);
+            this.panel16.TabIndex = 62;
+            // 
+            // tabWorkshift
+            // 
+            this.tabWorkshift.Controls.Add(this.adminShiftsDV);
+            this.tabWorkshift.Controls.Add(this.panel19);
+            this.tabWorkshift.Controls.Add(this.panel20);
+            this.tabWorkshift.Controls.Add(this.panel21);
+            this.tabWorkshift.Location = new System.Drawing.Point(4, 45);
+            this.tabWorkshift.Name = "tabWorkshift";
+            this.tabWorkshift.Padding = new System.Windows.Forms.Padding(3);
+            this.tabWorkshift.Size = new System.Drawing.Size(1029, 658);
+            this.tabWorkshift.TabIndex = 4;
+            this.tabWorkshift.Text = "Work Shifts";
+            this.tabWorkshift.UseVisualStyleBackColor = true;
+            // 
+            // adminShiftsDV
+            // 
+            this.adminShiftsDV.AllowUserToAddRows = false;
+            this.adminShiftsDV.AllowUserToDeleteRows = false;
+            this.adminShiftsDV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adminShiftsDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.adminShiftsDV.Location = new System.Drawing.Point(18, 20);
+            this.adminShiftsDV.Name = "adminShiftsDV";
+            this.adminShiftsDV.ReadOnly = true;
+            this.adminShiftsDV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.adminShiftsDV.RowTemplate.Height = 24;
+            this.adminShiftsDV.Size = new System.Drawing.Size(804, 619);
+            this.adminShiftsDV.TabIndex = 63;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel19.Controls.Add(this.pictureBox3);
+            this.panel19.Controls.Add(this.label12);
+            this.panel19.Location = new System.Drawing.Point(832, 20);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(178, 209);
+            this.panel19.TabIndex = 60;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(25, 28);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox3.TabIndex = 41;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label12.Font = new System.Drawing.Font("dark forest", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(17, 161);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(103, 43);
+            this.label12.TabIndex = 40;
+            this.label12.Text = "Shifts";
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.Orange;
+            this.panel20.Controls.Add(this.loadShifts);
+            this.panel20.Location = new System.Drawing.Point(832, 229);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(178, 122);
+            this.panel20.TabIndex = 61;
+            // 
+            // loadShifts
+            // 
+            this.loadShifts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loadShifts.Font = new System.Drawing.Font("Bebas Neue", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadShifts.ForeColor = System.Drawing.Color.White;
+            this.loadShifts.Location = new System.Drawing.Point(15, 36);
+            this.loadShifts.Margin = new System.Windows.Forms.Padding(0);
+            this.loadShifts.Name = "loadShifts";
+            this.loadShifts.Size = new System.Drawing.Size(148, 51);
+            this.loadShifts.TabIndex = 61;
+            this.loadShifts.Text = "Load Records";
+            this.loadShifts.UseVisualStyleBackColor = true;
+            this.loadShifts.Click += new System.EventHandler(this.loadShifts_Click);
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel21.Location = new System.Drawing.Point(832, 350);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(178, 289);
+            this.panel21.TabIndex = 62;
             // 
             // AdminPanel
             // 
@@ -779,11 +992,11 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.posIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.adminTabs.ResumeLayout(false);
             this.tabAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.adminAdminDV)).EndInit();
@@ -797,6 +1010,18 @@
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.posMeats)).EndInit();
+            this.tabSales.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.adminSalesDV)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel14.ResumeLayout(false);
+            this.tabWorkshift.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.adminShiftsDV)).EndInit();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel20.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -817,7 +1042,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker approductdateTimePicker;
+        private System.Windows.Forms.DateTimePicker apdateTimePicker;
         private System.Windows.Forms.TextBox employeeSalaryTB;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -859,5 +1084,21 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox peepsCategory;
+        private System.Windows.Forms.TabPage tabSales;
+        private System.Windows.Forms.DataGridView adminSalesDV;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Button loadSales;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.TabPage tabWorkshift;
+        private System.Windows.Forms.DataGridView adminShiftsDV;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Button loadShifts;
+        private System.Windows.Forms.Panel panel21;
     }
 }

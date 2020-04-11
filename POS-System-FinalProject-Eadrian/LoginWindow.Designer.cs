@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.adminLogin = new System.Windows.Forms.RadioButton();
             this.loginUsername = new System.Windows.Forms.TextBox();
             this.loginPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,8 +48,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.closeWindow = new System.Windows.Forms.PictureBox();
-            this.adminLogin = new System.Windows.Forms.RadioButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lwdateTimePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -98,6 +99,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lwdateTimePicker);
             this.panel1.Controls.Add(this.adminLogin);
             this.panel1.Controls.Add(this.loginUsername);
             this.panel1.Controls.Add(this.loginPassword);
@@ -105,11 +107,25 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.loginButton);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(464, 96);
+            this.panel1.Location = new System.Drawing.Point(464, 82);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(325, 342);
+            this.panel1.Size = new System.Drawing.Size(325, 356);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // adminLogin
+            // 
+            this.adminLogin.AutoSize = true;
+            this.adminLogin.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.adminLogin.Location = new System.Drawing.Point(87, 274);
+            this.adminLogin.Name = "adminLogin";
+            this.adminLogin.Size = new System.Drawing.Size(160, 22);
+            this.adminLogin.TabIndex = 12;
+            this.adminLogin.TabStop = true;
+            this.adminLogin.Text = "Administrator Login";
+            this.toolTip1.SetToolTip(this.adminLogin, "[?] Mark this if your trying to login as an administrator");
+            this.adminLogin.UseVisualStyleBackColor = true;
+            this.adminLogin.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // loginUsername
             // 
@@ -117,7 +133,7 @@
             this.loginUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.loginUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginUsername.ForeColor = System.Drawing.Color.White;
-            this.loginUsername.Location = new System.Drawing.Point(36, 155);
+            this.loginUsername.Location = new System.Drawing.Point(36, 175);
             this.loginUsername.Name = "loginUsername";
             this.loginUsername.Size = new System.Drawing.Size(253, 27);
             this.loginUsername.TabIndex = 7;
@@ -131,7 +147,7 @@
             this.loginPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.loginPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginPassword.ForeColor = System.Drawing.Color.White;
-            this.loginPassword.Location = new System.Drawing.Point(36, 215);
+            this.loginPassword.Location = new System.Drawing.Point(36, 235);
             this.loginPassword.Name = "loginPassword";
             this.loginPassword.PasswordChar = '*';
             this.loginPassword.Size = new System.Drawing.Size(253, 27);
@@ -146,7 +162,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(32, 189);
+            this.label5.Location = new System.Drawing.Point(32, 209);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 24);
             this.label5.TabIndex = 11;
@@ -159,7 +175,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(32, 128);
+            this.label4.Location = new System.Drawing.Point(32, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 24);
             this.label4.TabIndex = 10;
@@ -174,7 +190,7 @@
             this.loginButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.loginButton.Font = new System.Drawing.Font("Bebas Neue", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.ForestGreen;
-            this.loginButton.Location = new System.Drawing.Point(108, 287);
+            this.loginButton.Location = new System.Drawing.Point(108, 307);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(108, 33);
             this.loginButton.TabIndex = 9;
@@ -185,7 +201,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(108, 17);
+            this.pictureBox2.Location = new System.Drawing.Point(108, 41);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(108, 96);
             this.pictureBox2.TabIndex = 6;
@@ -277,24 +293,22 @@
             this.closeWindow.TabStop = false;
             this.closeWindow.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
-            // adminLogin
-            // 
-            this.adminLogin.AutoSize = true;
-            this.adminLogin.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.adminLogin.Location = new System.Drawing.Point(87, 254);
-            this.adminLogin.Name = "adminLogin";
-            this.adminLogin.Size = new System.Drawing.Size(160, 22);
-            this.adminLogin.TabIndex = 12;
-            this.adminLogin.TabStop = true;
-            this.adminLogin.Text = "Administrator Login";
-            this.toolTip1.SetToolTip(this.adminLogin, "[?] Mark this if your trying to login as an administrator");
-            this.adminLogin.UseVisualStyleBackColor = true;
-            this.adminLogin.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
             // toolTip1
             // 
             this.toolTip1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // lwdateTimePicker
+            // 
+            this.lwdateTimePicker.CalendarFont = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lwdateTimePicker.Font = new System.Drawing.Font("Bebas Neue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lwdateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.lwdateTimePicker.Location = new System.Drawing.Point(229, 3);
+            this.lwdateTimePicker.Name = "lwdateTimePicker";
+            this.lwdateTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lwdateTimePicker.RightToLeftLayout = true;
+            this.lwdateTimePicker.Size = new System.Drawing.Size(93, 25);
+            this.lwdateTimePicker.TabIndex = 13;
             // 
             // LoginWindow
             // 
@@ -352,5 +366,6 @@
         private System.Windows.Forms.PictureBox closeWindow;
         private System.Windows.Forms.RadioButton adminLogin;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DateTimePicker lwdateTimePicker;
     }
 }

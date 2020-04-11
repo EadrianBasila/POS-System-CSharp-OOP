@@ -417,11 +417,6 @@ namespace POSSystemOOPFinals
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox4_Click_2(object sender, EventArgs e)
         {
 
@@ -613,6 +608,14 @@ namespace POSSystemOOPFinals
         private void productStockTB_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+          
+            accessPanel formAP = new accessPanel();
+            formAP.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -58,6 +58,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cartesianChartBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.netProfitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -73,6 +75,7 @@
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartesianChartBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.netProfitBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -151,6 +154,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel10);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dashboardIcon);
             this.panel2.Controls.Add(this.inventoryIcon);
@@ -299,7 +304,7 @@
             this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(-1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(299, 48);
+            this.label2.Size = new System.Drawing.Size(312, 49);
             this.label2.TabIndex = 9;
             this.label2.Text = "PROFIT Percentage";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -334,7 +339,7 @@
             this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(4, 1);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(217, 48);
+            this.label3.Size = new System.Drawing.Size(224, 49);
             this.label3.TabIndex = 10;
             this.label3.Text = "GROSS Margin";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -366,7 +371,7 @@
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label4.Location = new System.Drawing.Point(7, 8);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(291, 60);
+            this.label4.Size = new System.Drawing.Size(301, 61);
             this.label4.TabIndex = 8;
             this.label4.Text = "STORE STOCKS";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -380,6 +385,25 @@
             // 
             this.netProfitBindingSource.DataSource = typeof(POSSystemOOPFinals.netProfit);
             this.netProfitBindingSource.CurrentChanged += new System.EventHandler(this.netProfitBindingSource_CurrentChanged);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel10.Location = new System.Drawing.Point(18, 637);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(101, 15);
+            this.panel10.TabIndex = 19;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(18, 649);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(101, 98);
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_2);
             // 
             // Dashboard
             // 
@@ -420,6 +444,7 @@
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartesianChartBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.netProfitBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -454,6 +479,8 @@
         private System.Windows.Forms.PictureBox posIcon;
         private System.Windows.Forms.Panel panel3;
         private LiveCharts.WinForms.PieChart pieChart1;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

@@ -384,6 +384,19 @@ namespace POS_System_FinalProject_Eadrian
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+ 
+            accessPanel formAP = new accessPanel();
+            formAP.ShowDialog();
+            this.Close();
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void inventoryIcon_Click(object sender, EventArgs e)
+        {
 
         }
     }

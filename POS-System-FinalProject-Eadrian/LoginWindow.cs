@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POS_System_FinalProject_Eadrian;
+using System;
 using System.Windows.Forms;
 
 
@@ -77,6 +78,14 @@ namespace POSSystemOOPFinals
                 {
                     if (record.loginUsername == peepsUsername && record.loginPassword == peepsPassword)
                     {
+                        recordDatabase sDatabase = new recordDatabase("EmployeeShifts");                      
+                        Workshift newRecord = new Workshift
+                        {
+                            employeeUsername = loginUsername.Text,
+                            shiftDate = lwdateTimePicker.Value.ToShortDateString()                                                  
+                        };
+                        sDatabase.addRecords("workShifts", newRecord);
+
                         this.Hide();
                         Dashboard formDashB = new Dashboard();
                         formDashB.ShowDialog();
@@ -103,6 +112,14 @@ namespace POSSystemOOPFinals
                 {
                     if (record.loginUsername == peepsUsername && record.loginPassword == peepsPassword)
                     {
+                        recordDatabase sDatabase = new recordDatabase("EmployeeShifts");
+                        Workshift newRecord = new Workshift
+                        {
+                            employeeUsername = loginUsername.Text,
+                            shiftDate = lwdateTimePicker.Value.ToShortDateString()
+                        };
+                        sDatabase.addRecords("workShifts", newRecord);
+
                         this.Hide();
                         Dashboard formDashB = new Dashboard();
                         formDashB.ShowDialog();
