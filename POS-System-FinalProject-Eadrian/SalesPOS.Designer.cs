@@ -177,11 +177,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("dark forest", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("dark forest", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(74, 15);
+            this.label4.Location = new System.Drawing.Point(76, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(229, 37);
+            this.label4.Size = new System.Drawing.Size(200, 30);
             this.label4.TabIndex = 8;
             this.label4.Text = "Purchase Summary";
             this.label4.Click += new System.EventHandler(this.label4_Click);

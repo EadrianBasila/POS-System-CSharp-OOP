@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanel));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -43,6 +43,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.peepsCategory = new System.Windows.Forms.ListBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -112,6 +113,7 @@
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -282,6 +284,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.pictureBox4);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.peepsCategory);
             this.panel6.Controls.Add(this.label9);
@@ -303,6 +306,17 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(459, 422);
             this.panel6.TabIndex = 43;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(400, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.TabIndex = 19;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label4
             // 
@@ -602,10 +616,10 @@
             this.adminAdminDV.Name = "adminAdminDV";
             this.adminAdminDV.ReadOnly = true;
             this.adminAdminDV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            this.adminAdminDV.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            this.adminAdminDV.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.adminAdminDV.RowTemplate.Height = 24;
             this.adminAdminDV.Size = new System.Drawing.Size(804, 619);
             this.adminAdminDV.TabIndex = 59;
@@ -955,9 +969,9 @@
             this.panel23.Controls.Add(this.label19);
             this.panel23.Controls.Add(this.exportExcel);
             this.panel23.Controls.Add(this.label17);
-            this.panel23.Location = new System.Drawing.Point(1356, 89);
+            this.panel23.Location = new System.Drawing.Point(1382, 89);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(323, 66);
+            this.panel23.Size = new System.Drawing.Size(297, 66);
             this.panel23.TabIndex = 48;
             // 
             // label19
@@ -966,7 +980,7 @@
             this.label19.BackColor = System.Drawing.Color.Green;
             this.label19.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(7, 35);
+            this.label19.Location = new System.Drawing.Point(11, 35);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(149, 24);
             this.label19.TabIndex = 14;
@@ -976,11 +990,12 @@
             // 
             this.exportExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exportExcel.BackgroundImage")));
             this.exportExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exportExcel.Location = new System.Drawing.Point(248, 4);
+            this.exportExcel.Location = new System.Drawing.Point(228, 6);
             this.exportExcel.Name = "exportExcel";
             this.exportExcel.Size = new System.Drawing.Size(64, 57);
             this.exportExcel.TabIndex = 13;
             this.exportExcel.TabStop = false;
+            this.exportExcel.Click += new System.EventHandler(this.exportExcel_Click);
             // 
             // label17
             // 
@@ -988,7 +1003,7 @@
             this.label17.BackColor = System.Drawing.Color.DodgerBlue;
             this.label17.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(7, 8);
+            this.label17.Location = new System.Drawing.Point(11, 8);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(208, 24);
             this.label17.TabIndex = 5;
@@ -1000,7 +1015,7 @@
             this.panel22.Controls.Add(this.label18);
             this.panel22.Location = new System.Drawing.Point(1220, 89);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(140, 66);
+            this.panel22.Size = new System.Drawing.Size(167, 66);
             this.panel22.TabIndex = 49;
             // 
             // label18
@@ -1009,7 +1024,7 @@
             this.label18.BackColor = System.Drawing.Color.DodgerBlue;
             this.label18.Font = new System.Drawing.Font("Bebas Neue", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(7, 7);
+            this.label18.Location = new System.Drawing.Point(1, 9);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(123, 52);
             this.label18.TabIndex = 5;
@@ -1043,6 +1058,7 @@
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -1162,5 +1178,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

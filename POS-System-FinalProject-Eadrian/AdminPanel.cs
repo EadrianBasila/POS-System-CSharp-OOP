@@ -224,5 +224,150 @@ namespace POS_System_FinalProject_Eadrian
             formInventory.ShowDialog();
             this.Close();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            employeeIdTB.Text = "";
+            employeeNameTB.Text = "";
+            employeeUsernameTB.Text = "";
+            employeePasswordTB.Text = "";
+            employeeSalaryTB.Text = "";
+            peepsCategory.Text = "";
+         
+        }
+
+        private void exportExcel_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            worksheet = workbook.Sheets["Sheet1"];
+
+
+            if (adminTabs.SelectedTab.Name == "tabAdmin")
+            {
+                worksheet = workbook.ActiveSheet; worksheet.Name = "Admin-Admins";
+                loadAdmin.PerformClick();
+
+                for (int i = 1; i < adminAdminDV.Columns.Count + 1; i++)
+                {
+                    worksheet.Cells[i, 1] = adminAdminDV.Columns[i - 1].HeaderText;
+                }
+                for (int i = 0; i < adminAdminDV.Rows.Count; i++)
+                {
+                    for (int j = 0; j < adminAdminDV.Columns.Count; j++)
+                        worksheet.Cells[i + 2, j + 1] = adminAdminDV.Rows[i].Cells[j].Value.ToString();
+
+                }
+
+                var saveFileDialog = new SaveFileDialog();
+                saveFileDialog.FileName = "RecordsAdmins-Inventory";
+                saveFileDialog.DefaultExt = ".xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    workbook.SaveAs(saveFileDialog.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                        Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing,
+                        Type.Missing, Type.Missing);
+                }
+                app.Quit();
+
+            }
+
+            else if (adminTabs.SelectedTab.Name == "tabEmployee")
+            {
+                worksheet = workbook.ActiveSheet; worksheet.Name = "Admin-Employees";
+                loadEmployee.PerformClick();
+
+                for (int i = 1; i < adminEmployeeDV.Columns.Count + 1; i++)
+                {
+                    worksheet.Cells[i, 1] = adminEmployeeDV.Columns[i - 1].HeaderText;
+                }
+                for (int i = 0; i < adminEmployeeDV.Rows.Count; i++)
+                {
+                    for (int j = 0; j < adminEmployeeDV.Columns.Count; j++)
+                        worksheet.Cells[i + 2, j + 1] = adminEmployeeDV.Rows[i].Cells[j].Value.ToString();
+
+                }
+
+                var saveFileDialog = new SaveFileDialog();
+                saveFileDialog.FileName = "RecordsEmployee-Inventory";
+                saveFileDialog.DefaultExt = ".xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    workbook.SaveAs(saveFileDialog.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                        Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing,
+                        Type.Missing, Type.Missing);
+                }
+                app.Quit();
+
+            }
+
+            else if (adminTabs.SelectedTab.Name == "tabSales")
+            {
+                worksheet = workbook.ActiveSheet; worksheet.Name = "Admin-Sales";
+                loadSales.PerformClick();
+
+                for (int i = 1; i < adminSalesDV.Columns.Count + 1; i++)
+                {
+                    worksheet.Cells[i, 1] = adminSalesDV.Columns[i - 1].HeaderText;
+                }
+                for (int i = 0; i < adminSalesDV.Rows.Count; i++)
+                {
+                    for (int j = 0; j < adminSalesDV.Columns.Count; j++)
+                        worksheet.Cells[i + 2, j + 1] = adminSalesDV.Rows[i].Cells[j].Value.ToString();
+
+                }
+
+                var saveFileDialog = new SaveFileDialog();
+                saveFileDialog.FileName = "RecordsSales-Inventory";
+                saveFileDialog.DefaultExt = ".xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    workbook.SaveAs(saveFileDialog.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                        Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing,
+                        Type.Missing, Type.Missing);
+                }
+                app.Quit();
+
+            }
+
+            else if (adminTabs.SelectedTab.Name == "tabWorkshift")
+            {
+                worksheet = workbook.ActiveSheet; worksheet.Name = "Admin-Workshifts";
+                loadShifts.PerformClick();
+
+                for (int i = 1; i < adminShiftsDV.Columns.Count + 1; i++)
+                {
+                    worksheet.Cells[i, 1] = adminShiftsDV.Columns[i - 1].HeaderText;
+                }
+                for (int i = 0; i < adminShiftsDV.Rows.Count; i++)
+                {
+                    for (int j = 0; j < adminShiftsDV.Columns.Count; j++)
+                        worksheet.Cells[i + 2, j + 1] = adminShiftsDV.Rows[i].Cells[j].Value.ToString();
+
+                }
+
+                var saveFileDialog = new SaveFileDialog();
+                saveFileDialog.FileName = "RecordsShifts-Inventory";
+                saveFileDialog.DefaultExt = ".xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    workbook.SaveAs(saveFileDialog.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                        Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing,
+                        Type.Missing, Type.Missing);
+                }
+                app.Quit();
+
+            }
+            
+            else
+            {
+                MessageBox.Show("[!] Exporting Error.");
+            }
+        }
     }
 }

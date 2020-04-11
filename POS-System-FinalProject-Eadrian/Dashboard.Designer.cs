@@ -37,10 +37,10 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dashboardIcon = new System.Windows.Forms.PictureBox();
             this.inventoryIcon = new System.Windows.Forms.PictureBox();
-            this.reportIcon = new System.Windows.Forms.PictureBox();
             this.posIcon = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,15 +58,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cartesianChartBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.netProfitBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.posIcon)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,7 +73,6 @@
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartesianChartBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.netProfitBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -154,12 +151,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.dashboardIcon);
             this.panel2.Controls.Add(this.inventoryIcon);
-            this.panel2.Controls.Add(this.reportIcon);
             this.panel2.Controls.Add(this.posIcon);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 74);
@@ -167,6 +162,17 @@
             this.panel2.Size = new System.Drawing.Size(140, 786);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(18, 649);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(101, 98);
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_2);
             // 
             // panel3
             // 
@@ -198,17 +204,6 @@
             this.inventoryIcon.TabIndex = 15;
             this.inventoryIcon.TabStop = false;
             this.inventoryIcon.Click += new System.EventHandler(this.inventoryIcon_Click);
-            // 
-            // reportIcon
-            // 
-            this.reportIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reportIcon.BackgroundImage")));
-            this.reportIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.reportIcon.Location = new System.Drawing.Point(18, 443);
-            this.reportIcon.Name = "reportIcon";
-            this.reportIcon.Size = new System.Drawing.Size(101, 98);
-            this.reportIcon.TabIndex = 14;
-            this.reportIcon.TabStop = false;
-            this.reportIcon.Click += new System.EventHandler(this.reportIcon_Click);
             // 
             // posIcon
             // 
@@ -248,7 +243,7 @@
             // 
             this.cartesianChart1.Location = new System.Drawing.Point(13, 91);
             this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(1039, 353);
+            this.cartesianChart1.Size = new System.Drawing.Size(1039, 328);
             this.cartesianChart1.TabIndex = 9;
             this.cartesianChart1.Text = "cartesianChart1";
             this.cartesianChart1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.cartesianChart1_ChildChanged);
@@ -386,25 +381,6 @@
             this.netProfitBindingSource.DataSource = typeof(POSSystemOOPFinals.netProfit);
             this.netProfitBindingSource.CurrentChanged += new System.EventHandler(this.netProfitBindingSource_CurrentChanged);
             // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel10.Location = new System.Drawing.Point(18, 637);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(101, 15);
-            this.panel10.TabIndex = 19;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(18, 649);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(101, 98);
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_2);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -429,9 +405,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.posIcon)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -444,7 +420,6 @@
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartesianChartBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.netProfitBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -475,11 +450,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox dashboardIcon;
         private System.Windows.Forms.PictureBox inventoryIcon;
-        private System.Windows.Forms.PictureBox reportIcon;
         private System.Windows.Forms.PictureBox posIcon;
         private System.Windows.Forms.Panel panel3;
         private LiveCharts.WinForms.PieChart pieChart1;
-        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

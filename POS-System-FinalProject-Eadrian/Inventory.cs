@@ -384,7 +384,7 @@ namespace POS_System_FinalProject_Eadrian
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
- 
+            this.Hide();
             accessPanel formAP = new accessPanel();
             formAP.ShowDialog();
             this.Close();
@@ -398,6 +398,182 @@ namespace POS_System_FinalProject_Eadrian
         private void inventoryIcon_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void exportExcel_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            worksheet = workbook.Sheets["Sheet1"];
+
+
+            if (invTabs.SelectedTab.Name == "tabSweets")
+            {
+                worksheet = workbook.ActiveSheet; worksheet.Name = "Inventory Sweets";
+                invButtonS.PerformClick();
+
+                for (int i = 1; i < invSweetsDV.Columns.Count + 1; i++)
+                {
+                    worksheet.Cells[i, 1] = invSweetsDV.Columns[i - 1].HeaderText;
+                }
+                for (int i = 0; i < invSweetsDV.Rows.Count; i++)
+                {
+                    for (int j = 0; j < invSweetsDV.Columns.Count; j++)
+                        worksheet.Cells[i + 2, j + 1] = invSweetsDV.Rows[i].Cells[j].Value.ToString();
+
+                }
+
+                var saveFileDialog = new SaveFileDialog();
+                saveFileDialog.FileName = "RecordsSweets-Inventory";
+                saveFileDialog.DefaultExt = ".xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    workbook.SaveAs(saveFileDialog.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                        Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing,
+                        Type.Missing, Type.Missing);
+                }
+                app.Quit();
+
+            }
+
+            else if (invTabs.SelectedTab.Name == "tabPastry")
+            {
+                worksheet = workbook.ActiveSheet; worksheet.Name = "Inventory Pastry";
+                invButtonP.PerformClick();
+
+                for (int i = 1; i < invPastryDV.Columns.Count + 1; i++)
+                {
+                    worksheet.Cells[i, 1] = invPastryDV.Columns[i - 1].HeaderText;
+                }
+                for (int i = 0; i < invPastryDV.Rows.Count; i++)
+                {
+                    for (int j = 0; j < invPastryDV.Columns.Count; j++)
+                        worksheet.Cells[i + 2, j + 1] = invPastryDV.Rows[i].Cells[j].Value.ToString();
+
+                }
+
+                var saveFileDialog = new SaveFileDialog();
+                saveFileDialog.FileName = "RecordsPastry-Inventory";
+                saveFileDialog.DefaultExt = ".xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    workbook.SaveAs(saveFileDialog.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                        Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing,
+                        Type.Missing, Type.Missing);
+                }
+                app.Quit();
+
+            }
+
+            else if (invTabs.SelectedTab.Name == "tabMeats")
+            {
+                worksheet = workbook.ActiveSheet; worksheet.Name = "Inventory Meats";
+                invButtonM.PerformClick();
+
+                for (int i = 1; i < invMeatsDV.Columns.Count + 1; i++)
+                {
+                    worksheet.Cells[i, 1] = invMeatsDV.Columns[i - 1].HeaderText;
+                }
+                for (int i = 0; i < invMeatsDV.Rows.Count; i++)
+                {
+                    for (int j = 0; j < invMeatsDV.Columns.Count; j++)
+                        worksheet.Cells[i + 2, j + 1] = invMeatsDV.Rows[i].Cells[j].Value.ToString();
+
+                }
+
+                var saveFileDialog = new SaveFileDialog();
+                saveFileDialog.FileName = "RecordsMeats-Inventory";
+                saveFileDialog.DefaultExt = ".xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    workbook.SaveAs(saveFileDialog.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                        Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing,
+                        Type.Missing, Type.Missing);
+                }
+                app.Quit();
+
+            }
+
+            else if (invTabs.SelectedTab.Name == "tabDrinks")
+            {
+                worksheet = workbook.ActiveSheet; worksheet.Name = "Inventory Sweets";
+                invButtonD.PerformClick();
+
+                for (int i = 1; i < invDrinksDV.Columns.Count + 1; i++)
+                {
+                    worksheet.Cells[i, 1] = invDrinksDV.Columns[i - 1].HeaderText;
+                }
+                for (int i = 0; i < invDrinksDV.Rows.Count; i++)
+                {
+                    for (int j = 0; j < invDrinksDV.Columns.Count; j++)
+                        worksheet.Cells[i + 2, j + 1] = invDrinksDV.Rows[i].Cells[j].Value.ToString();
+
+                }
+
+                var saveFileDialog = new SaveFileDialog();
+                saveFileDialog.FileName = "RecordsDrinks-Inventory";
+                saveFileDialog.DefaultExt = ".xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    workbook.SaveAs(saveFileDialog.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                        Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing,
+                        Type.Missing, Type.Missing);
+                }
+                app.Quit();
+
+            }
+
+            else if (invTabs.SelectedTab.Name == "tabFruits")
+            {
+                worksheet = workbook.ActiveSheet; worksheet.Name = "Inventory Fruits";
+                invButtonF.PerformClick();
+
+                for (int i = 1; i < invFruitsDV.Columns.Count + 1; i++)
+                {
+                    worksheet.Cells[i, 1] = invFruitsDV.Columns[i - 1].HeaderText;
+                }
+                for (int i = 0; i < invFruitsDV.Rows.Count; i++)
+                {
+                    for (int j = 0; j < invFruitsDV.Columns.Count; j++)
+                        worksheet.Cells[i + 2, j + 1] = invFruitsDV.Rows[i].Cells[j].Value.ToString();
+
+                }
+
+                var saveFileDialog = new SaveFileDialog();
+                saveFileDialog.FileName = "RecordsFruits-Inventory";
+                saveFileDialog.DefaultExt = ".xlsx";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    workbook.SaveAs(saveFileDialog.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                        Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing,
+                        Type.Missing, Type.Missing);
+                }
+                app.Quit();
+
+            }
+            
+            else 
+            {
+                MessageBox.Show("[!] Exporting Error.");
+            }        
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            productIdTB.Text = "";
+            productNameTB.Text = "";
+            productQuantityTB.Text = "";
+            productCostTB.Text = "";
+            productRetailTB.Text = "";
+            productSupplierTB.Text = "";
+            productlistCategory.Text = "";            
         }
     }
 }

@@ -612,7 +612,7 @@ namespace POSSystemOOPFinals
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-          
+            this.Hide();
             accessPanel formAP = new accessPanel();
             formAP.ShowDialog();
             this.Close();

@@ -124,7 +124,7 @@ namespace POS_System_FinalProject_Eadrian
                 purchaseProfit = ucProfit.Text
             };
             pDatabase.addRecords("purchaseRecords", newRecord);
-
+            this.Hide();
             SalesPOS formSalesPOS = new SalesPOS();
             formSalesPOS.ShowDialog();
             this.Close();
