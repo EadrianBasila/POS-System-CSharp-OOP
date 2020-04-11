@@ -617,5 +617,10 @@ namespace POSSystemOOPFinals
             formAP.ShowDialog();
             this.Close();
         }
+
+        private void reportIcon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

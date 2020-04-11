@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanel));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -62,12 +62,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dashboardIcon = new System.Windows.Forms.PictureBox();
             this.inventoryIcon = new System.Windows.Forms.PictureBox();
-            this.reportIcon = new System.Windows.Forms.PictureBox();
             this.posIcon = new System.Windows.Forms.PictureBox();
             this.adminTabs = new System.Windows.Forms.TabControl();
             this.tabAdmin = new System.Windows.Forms.TabPage();
@@ -102,6 +100,12 @@
             this.panel20 = new System.Windows.Forms.Panel();
             this.loadShifts = new System.Windows.Forms.Button();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.exportExcel = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -113,7 +117,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.posIcon)).BeginInit();
             this.adminTabs.SuspendLayout();
             this.tabAdmin.SuspendLayout();
@@ -136,6 +139,9 @@
             this.panel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel20.SuspendLayout();
+            this.panel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exportExcel)).BeginInit();
+            this.panel22.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -496,25 +502,15 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.dashboardIcon);
             this.panel3.Controls.Add(this.inventoryIcon);
-            this.panel3.Controls.Add(this.reportIcon);
             this.panel3.Controls.Add(this.posIcon);
             this.panel3.Location = new System.Drawing.Point(0, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(140, 786);
             this.panel3.TabIndex = 46;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel2.Location = new System.Drawing.Point(17, 637);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(101, 15);
-            this.panel2.TabIndex = 15;
             // 
             // pictureBox1
             // 
@@ -555,16 +551,6 @@
             this.inventoryIcon.TabIndex = 11;
             this.inventoryIcon.TabStop = false;
             this.inventoryIcon.Click += new System.EventHandler(this.inventoryIcon_Click);
-            // 
-            // reportIcon
-            // 
-            this.reportIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reportIcon.BackgroundImage")));
-            this.reportIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.reportIcon.Location = new System.Drawing.Point(17, 446);
-            this.reportIcon.Name = "reportIcon";
-            this.reportIcon.Size = new System.Drawing.Size(101, 98);
-            this.reportIcon.TabIndex = 10;
-            this.reportIcon.TabStop = false;
             // 
             // posIcon
             // 
@@ -616,10 +602,10 @@
             this.adminAdminDV.Name = "adminAdminDV";
             this.adminAdminDV.ReadOnly = true;
             this.adminAdminDV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            this.adminAdminDV.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            this.adminAdminDV.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.adminAdminDV.RowTemplate.Height = 24;
             this.adminAdminDV.Size = new System.Drawing.Size(804, 619);
             this.adminAdminDV.TabIndex = 59;
@@ -963,11 +949,79 @@
             this.panel21.Size = new System.Drawing.Size(178, 289);
             this.panel21.TabIndex = 62;
             // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.White;
+            this.panel23.Controls.Add(this.label19);
+            this.panel23.Controls.Add(this.exportExcel);
+            this.panel23.Controls.Add(this.label17);
+            this.panel23.Location = new System.Drawing.Point(1356, 89);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(323, 66);
+            this.panel23.TabIndex = 48;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Green;
+            this.label19.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(7, 35);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(149, 24);
+            this.label19.TabIndex = 14;
+            this.label19.Text = "Into Microsoft Excel";
+            // 
+            // exportExcel
+            // 
+            this.exportExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exportExcel.BackgroundImage")));
+            this.exportExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exportExcel.Location = new System.Drawing.Point(248, 4);
+            this.exportExcel.Name = "exportExcel";
+            this.exportExcel.Size = new System.Drawing.Size(64, 57);
+            this.exportExcel.TabIndex = 13;
+            this.exportExcel.TabStop = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label17.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(7, 8);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(208, 24);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Export Workforce Collection";
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel22.Controls.Add(this.label18);
+            this.panel22.Location = new System.Drawing.Point(1220, 89);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(140, 66);
+            this.panel22.TabIndex = 49;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label18.Font = new System.Drawing.Font("Bebas Neue", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(7, 7);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(123, 52);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "EXPORT";
+            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1700, 860);
+            this.Controls.Add(this.panel23);
+            this.Controls.Add(this.panel22);
             this.Controls.Add(this.adminTabs);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel9);
@@ -995,7 +1049,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.posIcon)).EndInit();
             this.adminTabs.ResumeLayout(false);
             this.tabAdmin.ResumeLayout(false);
@@ -1022,6 +1075,11 @@
             this.panel19.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel20.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exportExcel)).EndInit();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1058,12 +1116,10 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox dashboardIcon;
         private System.Windows.Forms.PictureBox inventoryIcon;
-        private System.Windows.Forms.PictureBox reportIcon;
         private System.Windows.Forms.PictureBox posIcon;
         private System.Windows.Forms.TabControl adminTabs;
         private System.Windows.Forms.TabPage tabAdmin;
@@ -1100,5 +1156,11 @@
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Button loadShifts;
         private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.PictureBox exportExcel;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Label label18;
     }
 }

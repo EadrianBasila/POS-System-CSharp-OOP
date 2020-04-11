@@ -49,11 +49,11 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.posIcon = new System.Windows.Forms.PictureBox();
-            this.reportIcon = new System.Windows.Forms.PictureBox();
             this.inventoryIcon = new System.Windows.Forms.PictureBox();
             this.dashboardIcon = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.posTabs = new System.Windows.Forms.TabControl();
             this.tabSweets = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -116,8 +116,6 @@
             this.productProfit = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -125,10 +123,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.posIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardIcon)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.posTabs.SuspendLayout();
             this.tabSweets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.posSweetsDV)).BeginInit();
@@ -159,7 +157,6 @@
             this.panel19.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel9
@@ -344,16 +341,6 @@
             this.posIcon.TabStop = false;
             this.posIcon.Click += new System.EventHandler(this.posIcon_Click);
             // 
-            // reportIcon
-            // 
-            this.reportIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reportIcon.BackgroundImage")));
-            this.reportIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.reportIcon.Location = new System.Drawing.Point(17, 446);
-            this.reportIcon.Name = "reportIcon";
-            this.reportIcon.Size = new System.Drawing.Size(101, 98);
-            this.reportIcon.TabIndex = 10;
-            this.reportIcon.TabStop = false;
-            // 
             // inventoryIcon
             // 
             this.inventoryIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("inventoryIcon.BackgroundImage")));
@@ -387,18 +374,27 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.panel26);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.dashboardIcon);
             this.panel3.Controls.Add(this.inventoryIcon);
-            this.panel3.Controls.Add(this.reportIcon);
             this.panel3.Controls.Add(this.posIcon);
             this.panel3.Location = new System.Drawing.Point(0, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(140, 786);
             this.panel3.TabIndex = 15;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 664);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 98);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // posTabs
             // 
@@ -1152,25 +1148,6 @@
             this.panel20.Size = new System.Drawing.Size(190, 227);
             this.panel20.TabIndex = 70;
             // 
-            // panel26
-            // 
-            this.panel26.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel26.Location = new System.Drawing.Point(17, 652);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(101, 15);
-            this.panel26.TabIndex = 19;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 664);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(101, 98);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // SalesPOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1195,10 +1172,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.posIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardIcon)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.posTabs.ResumeLayout(false);
             this.tabSweets.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.posSweetsDV)).EndInit();
@@ -1236,7 +1213,6 @@
             this.panel21.PerformLayout();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1252,7 +1228,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox posIcon;
-        private System.Windows.Forms.PictureBox reportIcon;
         private System.Windows.Forms.PictureBox inventoryIcon;
         private System.Windows.Forms.PictureBox dashboardIcon;
         private System.Windows.Forms.Panel panel5;
@@ -1324,7 +1299,6 @@
         private System.Windows.Forms.TextBox productPrice;
         private System.Windows.Forms.TextBox productProfit;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
