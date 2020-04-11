@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanel));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -616,10 +616,10 @@
             this.adminAdminDV.Name = "adminAdminDV";
             this.adminAdminDV.ReadOnly = true;
             this.adminAdminDV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            this.adminAdminDV.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            this.adminAdminDV.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.adminAdminDV.RowTemplate.Height = 24;
             this.adminAdminDV.Size = new System.Drawing.Size(804, 619);
             this.adminAdminDV.TabIndex = 59;
@@ -980,7 +980,7 @@
             this.label19.BackColor = System.Drawing.Color.Green;
             this.label19.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(11, 35);
+            this.label19.Location = new System.Drawing.Point(5, 35);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(149, 24);
             this.label19.TabIndex = 14;
@@ -1003,7 +1003,7 @@
             this.label17.BackColor = System.Drawing.Color.DodgerBlue;
             this.label17.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(11, 8);
+            this.label17.Location = new System.Drawing.Point(5, 8);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(208, 24);
             this.label17.TabIndex = 5;
@@ -1024,7 +1024,7 @@
             this.label18.BackColor = System.Drawing.Color.DodgerBlue;
             this.label18.Font = new System.Drawing.Font("Bebas Neue", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(1, 9);
+            this.label18.Location = new System.Drawing.Point(3, 8);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(123, 52);
             this.label18.TabIndex = 5;

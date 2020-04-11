@@ -44,7 +44,6 @@
             this.posIcon = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -54,10 +53,11 @@
             this.dbgrossLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.label4 = new System.Windows.Forms.Label();
             this.cartesianChartBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.netProfitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+            this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -239,15 +239,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_2);
             // 
-            // cartesianChart1
-            // 
-            this.cartesianChart1.Location = new System.Drawing.Point(13, 91);
-            this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(1039, 328);
-            this.cartesianChart1.TabIndex = 9;
-            this.cartesianChart1.Text = "cartesianChart1";
-            this.cartesianChart1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.cartesianChart1_ChildChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -350,15 +341,6 @@
             this.panel9.TabIndex = 9;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
-            // pieChart1
-            // 
-            this.pieChart1.Location = new System.Drawing.Point(31, 76);
-            this.pieChart1.Name = "pieChart1";
-            this.pieChart1.Size = new System.Drawing.Size(358, 383);
-            this.pieChart1.TabIndex = 9;
-            this.pieChart1.Text = "pieChart1";
-            this.pieChart1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.pieChart1_ChildChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -380,6 +362,26 @@
             // 
             this.netProfitBindingSource.DataSource = typeof(POSSystemOOPFinals.netProfit);
             this.netProfitBindingSource.CurrentChanged += new System.EventHandler(this.netProfitBindingSource_CurrentChanged);
+            // 
+            // cartesianChart1
+            // 
+            this.cartesianChart1.BackColor = System.Drawing.Color.Transparent;
+            this.cartesianChart1.Location = new System.Drawing.Point(13, 91);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(1039, 328);
+            this.cartesianChart1.TabIndex = 9;
+            this.cartesianChart1.Text = "cartesianChart1";
+            this.cartesianChart1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.cartesianChart1_ChildChanged);
+            // 
+            // pieChart1
+            // 
+            this.pieChart1.BackColor = System.Drawing.Color.Transparent;
+            this.pieChart1.Location = new System.Drawing.Point(31, 76);
+            this.pieChart1.Name = "pieChart1";
+            this.pieChart1.Size = new System.Drawing.Size(358, 383);
+            this.pieChart1.TabIndex = 9;
+            this.pieChart1.Text = "pieChart1";
+            this.pieChart1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.pieChart1_ChildChanged);
             // 
             // Dashboard
             // 
@@ -444,16 +446,16 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label dbprofitLabel;
         private System.Windows.Forms.Label dbgrossLabel;
-        private System.Windows.Forms.BindingSource netProfitBindingSource;
-        private LiveCharts.WinForms.CartesianChart cartesianChart1;
-        private System.Windows.Forms.BindingSource cartesianChartBindingSource;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox dashboardIcon;
         private System.Windows.Forms.PictureBox inventoryIcon;
         private System.Windows.Forms.PictureBox posIcon;
         private System.Windows.Forms.Panel panel3;
-        private LiveCharts.WinForms.PieChart pieChart1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private LiveCharts.WinForms.PieChart pieChart1;
+        private System.Windows.Forms.BindingSource cartesianChartBindingSource;
+        private System.Windows.Forms.BindingSource netProfitBindingSource;
     }
 }
 
