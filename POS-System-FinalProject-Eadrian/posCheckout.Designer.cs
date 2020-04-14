@@ -116,7 +116,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(29, 102);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(144, 45);
+            this.panel3.Size = new System.Drawing.Size(173, 45);
             this.panel3.TabIndex = 18;
             // 
             // label1
@@ -146,10 +146,10 @@
             this.ucCashTendered.BackColor = System.Drawing.Color.White;
             this.ucCashTendered.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ucCashTendered.Font = new System.Drawing.Font("Bebas Neue", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucCashTendered.Location = new System.Drawing.Point(174, 170);
+            this.ucCashTendered.Location = new System.Drawing.Point(193, 170);
             this.ucCashTendered.Name = "ucCashTendered";
             this.ucCashTendered.ReadOnly = true;
-            this.ucCashTendered.Size = new System.Drawing.Size(346, 45);
+            this.ucCashTendered.Size = new System.Drawing.Size(327, 45);
             this.ucCashTendered.TabIndex = 24;
             this.ucCashTendered.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.ucCashTendered.TextChanged += new System.EventHandler(this.ucCashTendered_TextChanged);
@@ -161,17 +161,17 @@
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(29, 170);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(144, 45);
+            this.panel4.Size = new System.Drawing.Size(173, 45);
             this.panel4.TabIndex = 19;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bebas Neue", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(15, 9);
+            this.label2.Location = new System.Drawing.Point(4, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 24);
+            this.label2.Size = new System.Drawing.Size(136, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "Cash Tendered:";
             // 
@@ -181,10 +181,10 @@
             this.ucTotalPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ucTotalPrice.Font = new System.Drawing.Font("Bebas Neue", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucTotalPrice.ForeColor = System.Drawing.Color.LimeGreen;
-            this.ucTotalPrice.Location = new System.Drawing.Point(174, 102);
+            this.ucTotalPrice.Location = new System.Drawing.Point(193, 102);
             this.ucTotalPrice.Name = "ucTotalPrice";
             this.ucTotalPrice.ReadOnly = true;
-            this.ucTotalPrice.Size = new System.Drawing.Size(346, 45);
+            this.ucTotalPrice.Size = new System.Drawing.Size(327, 45);
             this.ucTotalPrice.TabIndex = 23;
             this.ucTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.ucTotalPrice.TextChanged += new System.EventHandler(this.ucTotalPrice_TextChanged);
@@ -533,6 +533,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(550, 719);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
@@ -543,11 +544,11 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.ucChange);
             this.Controls.Add(this.ucCashTendered);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.ucTotalPrice);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "posCheckout";
             this.Text = "posCheckout";
             this.Load += new System.EventHandler(this.posCheckout_Load);

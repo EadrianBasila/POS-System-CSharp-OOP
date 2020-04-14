@@ -890,7 +890,7 @@
             "Meats",
             "Drinks",
             "Fruits"});
-            this.productlistCategory.Location = new System.Drawing.Point(266, 228);
+            this.productlistCategory.Location = new System.Drawing.Point(266, 231);
             this.productlistCategory.Name = "productlistCategory";
             this.productlistCategory.Size = new System.Drawing.Size(164, 25);
             this.productlistCategory.TabIndex = 13;
@@ -1032,7 +1032,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(11, 15);
+            this.label2.Location = new System.Drawing.Point(11, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(202, 24);
             this.label2.TabIndex = 1;
@@ -1098,7 +1098,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.textBox1.Font = new System.Drawing.Font("Bebas Neue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(15, 43);
+            this.textBox1.Location = new System.Drawing.Point(15, 46);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(408, 28);
@@ -1125,18 +1125,19 @@
             this.panel22.Controls.Add(this.label18);
             this.panel22.Location = new System.Drawing.Point(1219, 97);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(163, 66);
+            this.panel22.Size = new System.Drawing.Size(140, 66);
             this.panel22.TabIndex = 42;
+            this.panel22.Paint += new System.Windows.Forms.PaintEventHandler(this.panel22_Paint);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label18.Font = new System.Drawing.Font("Bebas Neue", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Bebas Neue", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(4, 9);
+            this.label18.Location = new System.Drawing.Point(3, 13);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(123, 52);
+            this.label18.Size = new System.Drawing.Size(108, 45);
             this.label18.TabIndex = 5;
             this.label18.Text = "EXPORT";
             // 
@@ -1144,11 +1145,11 @@
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label17.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Bebas Neue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(4, 8);
+            this.label17.Location = new System.Drawing.Point(14, 15);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(203, 24);
+            this.label17.Size = new System.Drawing.Size(174, 20);
             this.label17.TabIndex = 5;
             this.label17.Text = "Export Inventory Collection";
             // 
@@ -1158,20 +1159,20 @@
             this.panel23.Controls.Add(this.label19);
             this.panel23.Controls.Add(this.exportExcel);
             this.panel23.Controls.Add(this.label17);
-            this.panel23.Location = new System.Drawing.Point(1381, 97);
+            this.panel23.Location = new System.Drawing.Point(1352, 97);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(297, 66);
+            this.panel23.Size = new System.Drawing.Size(326, 66);
             this.panel23.TabIndex = 11;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Green;
-            this.label19.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Bebas Neue", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(4, 35);
+            this.label19.Location = new System.Drawing.Point(14, 35);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(149, 24);
+            this.label19.Size = new System.Drawing.Size(128, 20);
             this.label19.TabIndex = 14;
             this.label19.Text = "Into Microsoft Excel";
             // 
@@ -1179,7 +1180,7 @@
             // 
             this.exportExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exportExcel.BackgroundImage")));
             this.exportExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exportExcel.Location = new System.Drawing.Point(221, 6);
+            this.exportExcel.Location = new System.Drawing.Point(253, 6);
             this.exportExcel.Name = "exportExcel";
             this.exportExcel.Size = new System.Drawing.Size(64, 57);
             this.exportExcel.TabIndex = 13;
@@ -1201,6 +1202,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inventory";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

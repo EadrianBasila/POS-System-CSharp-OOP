@@ -111,7 +111,11 @@ namespace POS_System_FinalProject_Eadrian
         private void button2_Click(object sender, EventArgs e)
         {
             var receipt = rValue.ToString();
-            MessageBox.Show("[Receipt]"+ Environment.NewLine + receipt);
+            MessageBox.Show("[Receipt]" + Environment.NewLine + posdateTimePicker.Value.ToShortDateString() +
+                Environment.NewLine + Environment.NewLine+ receipt + Environment.NewLine +
+                "Total Price: " + ucTotalPrice.Text + Environment.NewLine +
+                "Cash Tendered: " + ucCashTendered.Text + Environment.NewLine +
+                "Change: " + ucChange.Text); ;
         }
 
         private void button1_Click(object sender, EventArgs e)

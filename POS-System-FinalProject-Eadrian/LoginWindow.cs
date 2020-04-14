@@ -66,6 +66,7 @@ namespace POSSystemOOPFinals
         }
 
         public string employee;
+        public string adminEmployee;
 
 
         private void label3_Click(object sender, EventArgs e)
@@ -93,7 +94,9 @@ namespace POSSystemOOPFinals
                         this.Hide();
                         Dashboard formDashB = new Dashboard();
                         employee = loginUsername.Text;
+                        adminEmployee = "1";
                         formDashB.employeeValue(employee.ToString());
+                        formDashB.adminEmployeeValue(adminEmployee.ToString());
                         formDashB.ShowDialog();
                         this.Close();
                     }
@@ -129,7 +132,9 @@ namespace POSSystemOOPFinals
                         this.Hide();
                         Dashboard formDashB = new Dashboard();
                         employee = loginUsername.Text;
+                        adminEmployee = "0";
                         formDashB.employeeValue(employee.ToString());
+                        formDashB.adminEmployeeValue(adminEmployee.ToString());
                         formDashB.ShowDialog();
                         this.Close();
                     }

@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lwdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.adminLogin = new System.Windows.Forms.RadioButton();
             this.loginUsername = new System.Windows.Forms.TextBox();
             this.loginPassword = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.closeWindow = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.lwdateTimePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -112,6 +112,18 @@
             this.panel1.Size = new System.Drawing.Size(325, 356);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lwdateTimePicker
+            // 
+            this.lwdateTimePicker.CalendarFont = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lwdateTimePicker.Font = new System.Drawing.Font("Bebas Neue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lwdateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.lwdateTimePicker.Location = new System.Drawing.Point(229, 3);
+            this.lwdateTimePicker.Name = "lwdateTimePicker";
+            this.lwdateTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lwdateTimePicker.RightToLeftLayout = true;
+            this.lwdateTimePicker.Size = new System.Drawing.Size(93, 25);
+            this.lwdateTimePicker.TabIndex = 13;
             // 
             // adminLogin
             // 
@@ -298,24 +310,13 @@
             this.toolTip1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
-            // lwdateTimePicker
-            // 
-            this.lwdateTimePicker.CalendarFont = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lwdateTimePicker.Font = new System.Drawing.Font("Bebas Neue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lwdateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.lwdateTimePicker.Location = new System.Drawing.Point(229, 3);
-            this.lwdateTimePicker.Name = "lwdateTimePicker";
-            this.lwdateTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lwdateTimePicker.RightToLeftLayout = true;
-            this.lwdateTimePicker.Size = new System.Drawing.Size(93, 25);
-            this.lwdateTimePicker.TabIndex = 13;
-            // 
             // LoginWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.closeWindow);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -323,11 +324,11 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginWindow";

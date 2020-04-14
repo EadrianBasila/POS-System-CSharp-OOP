@@ -575,5 +575,10 @@ namespace POS_System_FinalProject_Eadrian
             productSupplierTB.Text = "";
             productlistCategory.Text = "";            
         }
+
+        private void panel22_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

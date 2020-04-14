@@ -180,33 +180,44 @@ namespace POSSystemOOPFinals
         }
 
         public string eValue;
+        public string aValue;
         public void employeeValue(string p)
         {
             eValue = p.ToString();
         }
 
-        
+        public void adminEmployeeValue(string p)
+        {
+            aValue = p.ToString();
+        }
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
             textBox1.Text = eValue.ToString();
             textBox2.Text = "0";
-            
+           
+
+
         }
         private void pictureBox1_Click_2(object sender, EventArgs e)
         {
+           
             recordDatabase pDatabase = new recordDatabase("EmployeeShifts");
             var records = pDatabase.checkRecords<Workshift>("workShifts");
             var pCategory = textBox1.Text;
             List<Workshift> filtered = records.Where(x => x.employeeUsername == pCategory).ToList();
             dataGridView1.DataSource = filtered;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            
-            foreach (var record in filtered) 
+
+            foreach (var record in filtered)
             {
                 var salary = int.Parse(textBox2.Text) + 500;
                 textBox2.Text = salary.ToString();
             }
+            
+           
         }
 
       
@@ -273,13 +284,26 @@ namespace POSSystemOOPFinals
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MongoClient client = new MongoClient();
-            IMongoDatabase pDatabase = client.GetDatabase("Workforce");
-            IMongoCollection<Workforce> records = pDatabase.GetCollection<Workforce>("Peeps");
+            if (aValue.ToString() == "1")
+            {
+                MongoClient client = new MongoClient();
+                IMongoDatabase pDatabase = client.GetDatabase("Workforce");
+                IMongoCollection<Workforce> records = pDatabase.GetCollection<Workforce>("adminPeeps");
 
-            var recordsUpdate = Builders<Workforce>.Update.Set
-                (p => p.employeeSalary, textBox2.Text);
-            records.UpdateOne(s => s.loginUsername == textBox1.Text, recordsUpdate);
+                var recordsUpdate = Builders<Workforce>.Update.Set
+                    (p => p.employeeSalary, textBox2.Text);
+                records.UpdateOne(s => s.loginUsername == textBox1.Text, recordsUpdate);
+            }
+            else 
+            {
+                MongoClient client = new MongoClient();
+                IMongoDatabase pDatabase = client.GetDatabase("Workforce");
+                IMongoCollection<Workforce> records = pDatabase.GetCollection<Workforce>("Peeps");
+
+                var recordsUpdate = Builders<Workforce>.Update.Set
+                    (p => p.employeeSalary, textBox2.Text);
+                records.UpdateOne(s => s.loginUsername == textBox1.Text, recordsUpdate);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -310,19 +334,18 @@ namespace POSSystemOOPFinals
             dbSalesDV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
 
             int totalCost = dbSalesDV.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToInt32(t.Cells[2].Value));
-            tcisTB.Text = totalCost.ToString();
+            tcisTB.Text = totalCost.ToString() + "$";
 
             int totalRetail = dbSalesDV.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToInt32(t.Cells[3].Value));
-            traTB.Text = totalRetail.ToString();
+            traTB.Text = totalRetail.ToString() + "$";
 
             int grossMargin = (totalCost - totalRetail);
-            textBox3.Text = grossMargin.ToString();
+            textBox3.Text = grossMargin.ToString() + "$";
 
-            decimal profit = grossMargin/totalCost;
-            textBox4.Text = profit.ToString("N2");
-            //MessageBox.Show(profitPercentage.ToString());
-            //var profitPercentageB = (profitPercentageA * 100).ToString();
-            //textBox4.Text = float.Parse(profitPercentageB, CultureInfo.InvariantCulture).ToString();
+            double profit = Convert.ToDouble(grossMargin)/ Convert.ToDouble(totalCost);
+            double profitPercentage = Convert.ToDouble(profit) * 100;
+            textBox4.Text = profitPercentage.ToString("N2") + "%";
+            
         }
 
         private void pieChart1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)

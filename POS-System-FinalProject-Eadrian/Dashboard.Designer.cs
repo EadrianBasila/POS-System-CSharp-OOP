@@ -58,10 +58,11 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.pieChart1 = new LiveCharts.WinForms.PieChart();
-            this.label11 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pieChart1 = new LiveCharts.WinForms.PieChart();
+            this.label11 = new System.Windows.Forms.Label();
             this.dbSalesDV = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -88,7 +89,6 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -102,6 +102,7 @@
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel21.SuspendLayout();
             this.panel20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbSalesDV)).BeginInit();
@@ -119,7 +120,6 @@
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel13.SuspendLayout();
-            this.panel21.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -266,7 +266,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.OrangeRed;
-            this.panel4.Controls.Add(this.tcisTB);
+            this.panel4.Controls.Add(this.traTB);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Location = new System.Drawing.Point(172, 132);
@@ -277,11 +277,11 @@
             // 
             // tcisTB
             // 
-            this.tcisTB.BackColor = System.Drawing.Color.OrangeRed;
+            this.tcisTB.BackColor = System.Drawing.Color.Orange;
             this.tcisTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tcisTB.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcisTB.ForeColor = System.Drawing.Color.White;
-            this.tcisTB.Location = new System.Drawing.Point(15, 105);
+            this.tcisTB.Location = new System.Drawing.Point(14, 100);
             this.tcisTB.Name = "tcisTB";
             this.tcisTB.ReadOnly = true;
             this.tcisTB.Size = new System.Drawing.Size(170, 72);
@@ -347,10 +347,10 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Bebas Neue", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(87, 80);
+            this.textBox4.Location = new System.Drawing.Point(61, 80);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(263, 144);
+            this.textBox4.Size = new System.Drawing.Size(306, 144);
             this.textBox4.TabIndex = 15;
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -417,26 +417,14 @@
             this.panel9.TabIndex = 9;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
-            // pieChart1
+            // panel21
             // 
-            this.pieChart1.Location = new System.Drawing.Point(17, 642);
-            this.pieChart1.Name = "pieChart1";
-            this.pieChart1.Size = new System.Drawing.Size(374, 31);
-            this.pieChart1.TabIndex = 22;
-            this.pieChart1.Text = "pieChart1";
-            this.pieChart1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.pieChart1_ChildChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label11.Font = new System.Drawing.Font("Bebas Neue", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(17, 117);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(210, 48);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Sales Records";
+            this.panel21.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel21.Controls.Add(this.panel20);
+            this.panel21.Location = new System.Drawing.Point(329, 12);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(80, 667);
+            this.panel21.TabIndex = 20;
             // 
             // panel20
             // 
@@ -457,6 +445,27 @@
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            // 
+            // pieChart1
+            // 
+            this.pieChart1.Location = new System.Drawing.Point(17, 642);
+            this.pieChart1.Name = "pieChart1";
+            this.pieChart1.Size = new System.Drawing.Size(374, 31);
+            this.pieChart1.TabIndex = 22;
+            this.pieChart1.Text = "pieChart1";
+            this.pieChart1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.pieChart1_ChildChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label11.Font = new System.Drawing.Font("Bebas Neue", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(17, 117);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(210, 48);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Sales Records";
             // 
             // dbSalesDV
             // 
@@ -615,7 +624,7 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bebas Neue", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bebas Neue", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -634,7 +643,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.RowTemplate.Height = 46;
             this.dataGridView1.Size = new System.Drawing.Size(292, 230);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
@@ -738,11 +747,11 @@
             // 
             // traTB
             // 
-            this.traTB.BackColor = System.Drawing.Color.Orange;
+            this.traTB.BackColor = System.Drawing.Color.OrangeRed;
             this.traTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.traTB.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.traTB.ForeColor = System.Drawing.Color.White;
-            this.traTB.Location = new System.Drawing.Point(13, 108);
+            this.traTB.Location = new System.Drawing.Point(15, 99);
             this.traTB.Name = "traTB";
             this.traTB.ReadOnly = true;
             this.traTB.Size = new System.Drawing.Size(170, 72);
@@ -784,7 +793,7 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.Orange;
-            this.panel13.Controls.Add(this.traTB);
+            this.panel13.Controls.Add(this.tcisTB);
             this.panel13.Controls.Add(this.label7);
             this.panel13.Controls.Add(this.label5);
             this.panel13.Location = new System.Drawing.Point(381, 341);
@@ -792,15 +801,6 @@
             this.panel13.Size = new System.Drawing.Size(200, 200);
             this.panel13.TabIndex = 2;
             this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel21.Controls.Add(this.panel20);
-            this.panel21.Location = new System.Drawing.Point(329, 12);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(80, 667);
-            this.panel21.TabIndex = 20;
             // 
             // Dashboard
             // 
@@ -821,6 +821,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Dashboard";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -845,6 +846,7 @@
             this.panel7.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel21.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbSalesDV)).EndInit();
@@ -868,7 +870,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            this.panel21.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

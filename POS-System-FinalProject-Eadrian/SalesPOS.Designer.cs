@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesPOS));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.posTotalPrice = new System.Windows.Forms.TextBox();
@@ -177,11 +179,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("dark forest", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("dark forest", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(76, 16);
+            this.label4.Location = new System.Drawing.Point(71, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 30);
+            this.label4.Size = new System.Drawing.Size(229, 37);
             this.label4.TabIndex = 8;
             this.label4.Text = "Purchase Summary";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -201,7 +203,7 @@
             // posPurchaseTB
             // 
             this.posPurchaseTB.BackColor = System.Drawing.Color.PaleGreen;
-            this.posPurchaseTB.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posPurchaseTB.Font = new System.Drawing.Font("Bebas Neue", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.posPurchaseTB.ForeColor = System.Drawing.Color.Black;
             this.posPurchaseTB.Location = new System.Drawing.Point(14, 102);
             this.posPurchaseTB.Multiline = true;
@@ -441,13 +443,29 @@
             this.posSweetsDV.AllowUserToDeleteRows = false;
             this.posSweetsDV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.posSweetsDV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.posSweetsDV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.posSweetsDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.posSweetsDV.DefaultCellStyle = dataGridViewCellStyle9;
             this.posSweetsDV.Location = new System.Drawing.Point(20, 106);
             this.posSweetsDV.Name = "posSweetsDV";
             this.posSweetsDV.ReadOnly = true;
             this.posSweetsDV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.posSweetsDV.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posSweetsDV.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.posSweetsDV.RowTemplate.Height = 48;
             this.posSweetsDV.RowTemplate.ReadOnly = true;
             this.posSweetsDV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -610,8 +628,8 @@
             this.posPastryDV.Name = "posPastryDV";
             this.posPastryDV.ReadOnly = true;
             this.posPastryDV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.posPastryDV.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posPastryDV.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.posPastryDV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.posPastryDV.RowTemplate.Height = 48;
             this.posPastryDV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -708,8 +726,8 @@
             this.posMeatsDV.Name = "posMeatsDV";
             this.posMeatsDV.ReadOnly = true;
             this.posMeatsDV.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.posMeatsDV.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posMeatsDV.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.posMeatsDV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.posMeatsDV.RowTemplate.Height = 48;
             this.posMeatsDV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -805,8 +823,8 @@
             this.posDrinksDV.Name = "posDrinksDV";
             this.posDrinksDV.ReadOnly = true;
             this.posDrinksDV.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.posDrinksDV.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posDrinksDV.RowsDefaultCellStyle = dataGridViewCellStyle13;
             this.posDrinksDV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.posDrinksDV.RowTemplate.Height = 48;
             this.posDrinksDV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -901,8 +919,8 @@
             this.posFruitsDV.Name = "posFruitsDV";
             this.posFruitsDV.ReadOnly = true;
             this.posFruitsDV.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.posFruitsDV.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posFruitsDV.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.posFruitsDV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.posFruitsDV.RowTemplate.Height = 48;
             this.posFruitsDV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -934,7 +952,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(6, 158);
+            this.label3.Location = new System.Drawing.Point(6, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 24);
             this.label3.TabIndex = 71;
@@ -956,7 +974,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(6, 40);
+            this.label2.Location = new System.Drawing.Point(6, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 24);
             this.label2.TabIndex = 69;
@@ -967,7 +985,7 @@
             this.productIdTB.BackColor = System.Drawing.Color.White;
             this.productIdTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productIdTB.Font = new System.Drawing.Font("Bebas Neue", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productIdTB.Location = new System.Drawing.Point(10, 67);
+            this.productIdTB.Location = new System.Drawing.Point(10, 57);
             this.productIdTB.Name = "productIdTB";
             this.productIdTB.ReadOnly = true;
             this.productIdTB.Size = new System.Drawing.Size(170, 28);
@@ -978,7 +996,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(6, 228);
+            this.label1.Location = new System.Drawing.Point(6, 234);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 24);
             this.label1.TabIndex = 68;
@@ -989,7 +1007,7 @@
             this.productStockTB.BackColor = System.Drawing.Color.White;
             this.productStockTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productStockTB.Font = new System.Drawing.Font("Bebas Neue", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productStockTB.Location = new System.Drawing.Point(11, 258);
+            this.productStockTB.Location = new System.Drawing.Point(11, 266);
             this.productStockTB.Name = "productStockTB";
             this.productStockTB.ReadOnly = true;
             this.productStockTB.Size = new System.Drawing.Size(170, 40);
@@ -1001,7 +1019,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(96, 158);
+            this.label18.Location = new System.Drawing.Point(96, 154);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(54, 24);
             this.label18.TabIndex = 66;
@@ -1012,7 +1030,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(6, 98);
+            this.label17.Location = new System.Drawing.Point(6, 90);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(107, 24);
             this.label17.TabIndex = 66;
@@ -1034,7 +1052,7 @@
             this.productNameTB.BackColor = System.Drawing.Color.White;
             this.productNameTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productNameTB.Font = new System.Drawing.Font("Bebas Neue", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productNameTB.Location = new System.Drawing.Point(10, 125);
+            this.productNameTB.Location = new System.Drawing.Point(10, 120);
             this.productNameTB.Name = "productNameTB";
             this.productNameTB.ReadOnly = true;
             this.productNameTB.Size = new System.Drawing.Size(170, 28);
@@ -1046,10 +1064,10 @@
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(32, 169);
+            this.button14.Location = new System.Drawing.Point(32, 166);
             this.button14.Margin = new System.Windows.Forms.Padding(0);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(131, 44);
+            this.button14.Size = new System.Drawing.Size(131, 50);
             this.button14.TabIndex = 69;
             this.button14.Text = "Reset:";
             this.button14.UseVisualStyleBackColor = false;
@@ -1072,10 +1090,10 @@
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(32, 118);
+            this.button15.Location = new System.Drawing.Point(32, 111);
             this.button15.Margin = new System.Windows.Forms.Padding(0);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(131, 44);
+            this.button15.Size = new System.Drawing.Size(131, 50);
             this.button15.TabIndex = 68;
             this.button15.Text = "ADD:";
             this.button15.UseVisualStyleBackColor = false;
@@ -1086,7 +1104,7 @@
             this.productPurchaseQuantity.BackColor = System.Drawing.Color.White;
             this.productPurchaseQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productPurchaseQuantity.Font = new System.Drawing.Font("Bebas Neue", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productPurchaseQuantity.Location = new System.Drawing.Point(10, 44);
+            this.productPurchaseQuantity.Location = new System.Drawing.Point(10, 49);
             this.productPurchaseQuantity.Name = "productPurchaseQuantity";
             this.productPurchaseQuantity.Size = new System.Drawing.Size(170, 45);
             this.productPurchaseQuantity.TabIndex = 65;
@@ -1160,6 +1178,7 @@
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SalesPOS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.SalesPOS_Load);

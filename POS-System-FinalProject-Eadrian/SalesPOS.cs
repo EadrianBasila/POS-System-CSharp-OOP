@@ -219,6 +219,7 @@ namespace POSSystemOOPFinals
         {
             posTotalPrice.Text = "0";
             productProfit.Text = "0";
+
         }
 
 
