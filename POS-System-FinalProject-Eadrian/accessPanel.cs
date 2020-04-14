@@ -54,8 +54,9 @@ namespace POS_System_FinalProject_Eadrian
                     MessageBox.Show("[!] Incorrect Credentials. ");
                     loginUsername.Text = "";
                     loginPassword.Text = "";
-                    Dashboard formDashB = new Dashboard();
-                    formDashB.ShowDialog();
+                    this.Hide();
+                    LoginWindow formLW = new LoginWindow();
+                    formLW.ShowDialog();
                     this.Close();
                 }
 

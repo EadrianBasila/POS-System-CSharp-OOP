@@ -13,6 +13,7 @@ namespace POSSystemOOPFinals
         string peepsUsername;
         string peepsPassword;
 
+        
         public LoginWindow()
         {
             InitializeComponent();
@@ -64,6 +65,9 @@ namespace POSSystemOOPFinals
             peepsPassword = loginPassword.Text;
         }
 
+        public string employee;
+
+
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -88,6 +92,8 @@ namespace POSSystemOOPFinals
 
                         this.Hide();
                         Dashboard formDashB = new Dashboard();
+                        employee = loginUsername.Text;
+                        formDashB.employeeValue(employee.ToString());
                         formDashB.ShowDialog();
                         this.Close();
                     }
@@ -122,6 +128,8 @@ namespace POSSystemOOPFinals
 
                         this.Hide();
                         Dashboard formDashB = new Dashboard();
+                        employee = loginUsername.Text;
+                        formDashB.employeeValue(employee.ToString());
                         formDashB.ShowDialog();
                         this.Close();
                     }
@@ -136,6 +144,9 @@ namespace POSSystemOOPFinals
                 }
 
             }
+
+            
+
 
         }
 

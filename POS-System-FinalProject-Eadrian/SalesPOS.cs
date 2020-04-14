@@ -29,8 +29,8 @@ namespace POSSystemOOPFinals
         private void dashboardIcon_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Dashboard formDashboard = new Dashboard();
-            formDashboard.ShowDialog();
+            LoginWindow formLW = new LoginWindow();
+            formLW.ShowDialog();
             this.Close();
         }
 

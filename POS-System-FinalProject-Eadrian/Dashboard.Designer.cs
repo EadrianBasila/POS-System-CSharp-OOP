@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -43,21 +46,49 @@
             this.inventoryIcon = new System.Windows.Forms.PictureBox();
             this.posIcon = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tcisTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dbprofitLabel = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.dbgrossLabel = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cartesianChartBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.netProfitBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.pieChart1 = new LiveCharts.WinForms.PieChart();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.dbSalesDV = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.traTB = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -71,8 +102,24 @@
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cartesianChartBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.netProfitBindingSource)).BeginInit();
+            this.panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbSalesDV)).BeginInit();
+            this.panel10.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel15.SuspendLayout();
+            this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel13.SuspendLayout();
+            this.panel21.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -218,38 +265,61 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.cartesianChart1);
+            this.panel4.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel4.Controls.Add(this.tcisTB);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(172, 101);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Location = new System.Drawing.Point(172, 132);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1068, 435);
+            this.panel4.Size = new System.Drawing.Size(200, 200);
             this.panel4.TabIndex = 2;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // tcisTB
+            // 
+            this.tcisTB.BackColor = System.Drawing.Color.OrangeRed;
+            this.tcisTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tcisTB.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tcisTB.ForeColor = System.Drawing.Color.White;
+            this.tcisTB.Location = new System.Drawing.Point(15, 105);
+            this.tcisTB.Name = "tcisTB";
+            this.tcisTB.ReadOnly = true;
+            this.tcisTB.Size = new System.Drawing.Size(170, 72);
+            this.tcisTB.TabIndex = 13;
+            this.tcisTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("dark forest", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(0, -2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 49);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "TCIS";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("dark forest", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(7, 52);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(142, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Total Cost of Items";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1026, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_2);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("dark forest", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(0, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 77);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "NET Profit";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // panel6
             // 
@@ -263,25 +333,27 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DarkOrange;
-            this.panel5.Controls.Add(this.dbprofitLabel);
+            this.panel5.Controls.Add(this.textBox4);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Location = new System.Drawing.Point(172, 551);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(412, 270);
+            this.panel5.Size = new System.Drawing.Size(409, 270);
             this.panel5.TabIndex = 5;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint_1);
             // 
-            // dbprofitLabel
+            // textBox4
             // 
-            this.dbprofitLabel.AutoSize = true;
-            this.dbprofitLabel.Font = new System.Drawing.Font("Bebas Neue", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dbprofitLabel.ForeColor = System.Drawing.Color.White;
-            this.dbprofitLabel.Location = new System.Drawing.Point(52, 73);
-            this.dbprofitLabel.Name = "dbprofitLabel";
-            this.dbprofitLabel.Size = new System.Drawing.Size(283, 180);
-            this.dbprofitLabel.TabIndex = 10;
-            this.dbprofitLabel.Text = "69%";
-            this.dbprofitLabel.Click += new System.EventHandler(this.label5_Click);
+            this.textBox4.BackColor = System.Drawing.Color.DarkOrange;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("Bebas Neue", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.White;
+            this.textBox4.Location = new System.Drawing.Point(87, 80);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(263, 144);
+            this.textBox4.TabIndex = 15;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label2
             // 
@@ -297,26 +369,27 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel7.Controls.Add(this.dbgrossLabel);
+            this.panel7.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel7.Controls.Add(this.textBox3);
             this.panel7.Controls.Add(this.label3);
-            this.panel7.Location = new System.Drawing.Point(579, 551);
+            this.panel7.Location = new System.Drawing.Point(590, 551);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(661, 270);
+            this.panel7.Size = new System.Drawing.Size(643, 270);
             this.panel7.TabIndex = 6;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint_1);
             // 
-            // dbgrossLabel
+            // textBox3
             // 
-            this.dbgrossLabel.AutoSize = true;
-            this.dbgrossLabel.Font = new System.Drawing.Font("Bebas Neue", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dbgrossLabel.ForeColor = System.Drawing.Color.White;
-            this.dbgrossLabel.Location = new System.Drawing.Point(75, 58);
-            this.dbgrossLabel.Name = "dbgrossLabel";
-            this.dbgrossLabel.Size = new System.Drawing.Size(375, 180);
-            this.dbgrossLabel.TabIndex = 11;
-            this.dbgrossLabel.Text = "$1000";
-            this.dbgrossLabel.Click += new System.EventHandler(this.dbgrossLabel_Click);
+            this.textBox3.BackColor = System.Drawing.Color.DarkGreen;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Bebas Neue", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.White;
+            this.textBox3.Location = new System.Drawing.Point(134, 80);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(408, 144);
+            this.textBox3.TabIndex = 14;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
@@ -333,55 +406,401 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.panel21);
             this.panel9.Controls.Add(this.pieChart1);
+            this.panel9.Controls.Add(this.label11);
+            this.panel9.Controls.Add(this.dbSalesDV);
             this.panel9.Controls.Add(this.label4);
-            this.panel9.Location = new System.Drawing.Point(1256, 101);
+            this.panel9.Location = new System.Drawing.Point(1256, 132);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(418, 720);
+            this.panel9.Size = new System.Drawing.Size(418, 689);
             this.panel9.TabIndex = 9;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            // 
+            // pieChart1
+            // 
+            this.pieChart1.Location = new System.Drawing.Point(17, 642);
+            this.pieChart1.Name = "pieChart1";
+            this.pieChart1.Size = new System.Drawing.Size(374, 31);
+            this.pieChart1.TabIndex = 22;
+            this.pieChart1.Text = "pieChart1";
+            this.pieChart1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.pieChart1_ChildChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label11.Font = new System.Drawing.Font("Bebas Neue", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(17, 117);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(210, 48);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Sales Records";
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.White;
+            this.panel20.Controls.Add(this.pictureBox4);
+            this.panel20.Location = new System.Drawing.Point(6, 7);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(68, 70);
+            this.panel20.TabIndex = 20;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            // 
+            // dbSalesDV
+            // 
+            this.dbSalesDV.AllowUserToAddRows = false;
+            this.dbSalesDV.AllowUserToDeleteRows = false;
+            this.dbSalesDV.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dbSalesDV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bebas Neue", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbSalesDV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dbSalesDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bebas Neue", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dbSalesDV.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dbSalesDV.Location = new System.Drawing.Point(17, 181);
+            this.dbSalesDV.Name = "dbSalesDV";
+            this.dbSalesDV.ReadOnly = true;
+            this.dbSalesDV.RowHeadersWidth = 51;
+            this.dbSalesDV.RowTemplate.Height = 56;
+            this.dbSalesDV.Size = new System.Drawing.Size(291, 433);
+            this.dbSalesDV.TabIndex = 12;
+            this.dbSalesDV.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dbSalesDV_DataBindingComplete);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("dark forest", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("dark forest", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(7, 8);
+            this.label4.Location = new System.Drawing.Point(-7, -5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(301, 61);
+            this.label4.Size = new System.Drawing.Size(277, 102);
             this.label4.TabIndex = 8;
-            this.label4.Text = "STORE STOCKS";
+            this.label4.Text = "STOCKS";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // cartesianChartBindingSource
+            // panel10
             // 
-            this.cartesianChartBindingSource.DataSource = typeof(LiveCharts.WinForms.CartesianChart);
-            this.cartesianChartBindingSource.CurrentChanged += new System.EventHandler(this.cartesianChartBindingSource_CurrentChanged);
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.panel19);
+            this.panel10.Controls.Add(this.panel18);
+            this.panel10.Controls.Add(this.panel17);
+            this.panel10.Controls.Add(this.panel16);
+            this.panel10.Controls.Add(this.panel15);
+            this.panel10.Controls.Add(this.panel14);
+            this.panel10.Controls.Add(this.pictureBox3);
+            this.panel10.Location = new System.Drawing.Point(590, 132);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(643, 409);
+            this.panel10.TabIndex = 10;
             // 
-            // netProfitBindingSource
+            // panel19
             // 
-            this.netProfitBindingSource.DataSource = typeof(POSSystemOOPFinals.netProfit);
-            this.netProfitBindingSource.CurrentChanged += new System.EventHandler(this.netProfitBindingSource_CurrentChanged);
+            this.panel19.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel19.Controls.Add(this.label10);
+            this.panel19.Controls.Add(this.button1);
+            this.panel19.Location = new System.Drawing.Point(338, 309);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(292, 90);
+            this.panel19.TabIndex = 23;
             // 
-            // cartesianChart1
+            // label10
             // 
-            this.cartesianChart1.BackColor = System.Drawing.Color.Transparent;
-            this.cartesianChart1.Location = new System.Drawing.Point(13, 91);
-            this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(1039, 328);
-            this.cartesianChart1.TabIndex = 9;
-            this.cartesianChart1.Text = "cartesianChart1";
-            this.cartesianChart1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.cartesianChart1_ChildChanged);
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("dark forest", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Transparent;
+            this.label10.Location = new System.Drawing.Point(4, 6);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(214, 22);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Send Earnings to Database";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // pieChart1
+            // button1
             // 
-            this.pieChart1.BackColor = System.Drawing.Color.Transparent;
-            this.pieChart1.Location = new System.Drawing.Point(31, 76);
-            this.pieChart1.Name = "pieChart1";
-            this.pieChart1.Size = new System.Drawing.Size(358, 383);
-            this.pieChart1.TabIndex = 9;
-            this.pieChart1.Text = "pieChart1";
-            this.pieChart1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.pieChart1_ChildChanged);
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Bebas Neue", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button1.Location = new System.Drawing.Point(80, 36);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 45);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Update";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel18.Controls.Add(this.textBox2);
+            this.panel18.Location = new System.Drawing.Point(338, 188);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(292, 115);
+            this.panel18.TabIndex = 22;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.ForestGreen;
+            this.textBox2.Location = new System.Drawing.Point(8, 21);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(274, 72);
+            this.textBox2.TabIndex = 12;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel17.Controls.Add(this.label12);
+            this.panel17.Location = new System.Drawing.Point(338, 96);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(292, 86);
+            this.panel17.TabIndex = 21;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("dark forest", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Transparent;
+            this.label12.Location = new System.Drawing.Point(6, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(212, 43);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Your Earnings";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel16.Controls.Add(this.dataGridView1);
+            this.panel16.Controls.Add(this.label9);
+            this.panel16.Location = new System.Drawing.Point(13, 96);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(319, 303);
+            this.panel16.TabIndex = 20;
+            this.panel16.Paint += new System.Windows.Forms.PaintEventHandler(this.panel16_Paint);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bebas Neue", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bebas Neue", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 63);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(292, 230);
+            this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("dark forest", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(201, 49);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Work Shifts";
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel15.Controls.Add(this.pictureBox1);
+            this.panel15.Location = new System.Drawing.Point(550, 13);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(80, 70);
+            this.panel15.TabIndex = 19;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel14.Controls.Add(this.label8);
+            this.panel14.Controls.Add(this.textBox1);
+            this.panel14.Location = new System.Drawing.Point(83, 13);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(461, 70);
+            this.panel14.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("dark forest", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(3, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(160, 49);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Welcome:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Bebas Neue", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(215, 14);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(214, 52);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "Welcome User";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("dark forest", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(-2, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 49);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "TRA";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.ForestGreen;
+            this.panel11.Controls.Add(this.pictureBox8);
+            this.panel11.Location = new System.Drawing.Point(381, 132);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(200, 200);
+            this.panel11.TabIndex = 2;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(14, 17);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(173, 166);
+            this.pictureBox8.TabIndex = 17;
+            this.pictureBox8.TabStop = false;
+            // 
+            // traTB
+            // 
+            this.traTB.BackColor = System.Drawing.Color.Orange;
+            this.traTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.traTB.Font = new System.Drawing.Font("Bebas Neue", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.traTB.ForeColor = System.Drawing.Color.White;
+            this.traTB.Location = new System.Drawing.Point(13, 108);
+            this.traTB.Name = "traTB";
+            this.traTB.ReadOnly = true;
+            this.traTB.Size = new System.Drawing.Size(170, 72);
+            this.traTB.TabIndex = 14;
+            this.traTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("dark forest", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(3, 52);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(145, 20);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Total Retail Amount";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel12.Controls.Add(this.pictureBox7);
+            this.panel12.Location = new System.Drawing.Point(172, 341);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(200, 200);
+            this.panel12.TabIndex = 2;
+            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(15, 14);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(173, 166);
+            this.pictureBox7.TabIndex = 16;
+            this.pictureBox7.TabStop = false;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Orange;
+            this.panel13.Controls.Add(this.traTB);
+            this.panel13.Controls.Add(this.label7);
+            this.panel13.Controls.Add(this.label5);
+            this.panel13.Location = new System.Drawing.Point(381, 341);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(200, 200);
+            this.panel13.TabIndex = 2;
+            this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel21.Controls.Add(this.panel20);
+            this.panel21.Location = new System.Drawing.Point(329, 12);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(80, 667);
+            this.panel21.TabIndex = 20;
             // 
             // Dashboard
             // 
@@ -390,17 +809,23 @@
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1700, 860);
+            this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel13);
+            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "Dashboard";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -420,8 +845,30 @@
             this.panel7.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cartesianChartBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.netProfitBindingSource)).EndInit();
+            this.panel20.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbSalesDV)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel15.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel21.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -439,23 +886,51 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label dbprofitLabel;
-        private System.Windows.Forms.Label dbgrossLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox dashboardIcon;
         private System.Windows.Forms.PictureBox inventoryIcon;
         private System.Windows.Forms.PictureBox posIcon;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tcisTB;
+        private System.Windows.Forms.TextBox traTB;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.DataGridView dbSalesDV;
+        private System.Windows.Forms.Label label11;
         private LiveCharts.WinForms.PieChart pieChart1;
-        private System.Windows.Forms.BindingSource cartesianChartBindingSource;
-        private System.Windows.Forms.BindingSource netProfitBindingSource;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Panel panel21;
     }
 }
 
