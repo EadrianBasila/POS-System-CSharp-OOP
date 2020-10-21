@@ -110,7 +110,7 @@ namespace POS_System_FinalProject_Eadrian
                 productSupplier = productSupplierTB.Text,
                 productCategory = productlistCategory.SelectedItem.ToString(),
                 productDate = productdateTimePicker.Value.ToShortDateString()
-
+                //push
             };
             pDatabase.addRecords("productList", newProduct);
 
